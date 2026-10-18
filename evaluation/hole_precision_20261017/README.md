@@ -212,7 +212,7 @@ The local `/live` workspace now uses this detector and refiner through
 `app/hole_api.py`. It supports photo uploads, camera snapshots, board calibration,
 saved reference circuits, live sessions, and bounded SQLite history. See
 [`app/README.md`](../../app/README.md) for startup and API details. The original
-dashboard remains at `/`; its older detector path is separate.
+dashboard is at `/classic`; its older detector path is separate.
 
 Use `vision_ml.live_inspector.LiveInspector(setup=..., weights=...,
 reference=..., refiner_weights=..., device='mps')`, then call `inspect(frame)` with a BGR NumPy image.

@@ -68,10 +68,17 @@ def sse_events(client, inspection_id):
     return events
 
 
+def test_root_redirects_to_live_workspace(context):
+    response = context.client.get('/', follow_redirects=False)
+    assert response.status_code == 307 and response.headers['location'] == '/live'
+    live = context.client.get('/')
+    assert live.status_code == 200 and 'Live wiring' in live.text
+
+
 def test_dashboard_root_and_static_dependencies(context):
-    route = next(route for route in context.app.routes if getattr(route, 'path', None) == '/')
+    route = next(route for route in context.app.routes if getattr(route, 'path', None) == '/classic')
     assert isinstance(route.endpoint(), FileResponse)
-    response = context.client.get('/')
+    response = context.client.get('/classic')
     assert response.status_code == 200 and response.headers['content-type'].startswith('text/html')
     assert 'Sherlock Ohms' in response.text
     assert any(route.path == '/static' for route in context.app.routes)

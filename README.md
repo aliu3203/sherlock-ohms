@@ -15,8 +15,9 @@ SHERLOCK_DATA_DIR="$PWD/.local-data" \
   .venv/bin/python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
 ```
 
-Open **http://127.0.0.1:8000/live** for the trained-model workspace. The original
-dashboard is available at `/`, and interactive API documentation is at `/docs`.
+Open **http://127.0.0.1:8000/** for the trained-model workspace (it redirects to
+`/live`). The original dashboard, including its browser demo, is available at
+`/classic`, and interactive API documentation is at `/docs`.
 There is no frontend build step.
 
 - Upload a photo, or connect a browser camera and press **Take photo**, to detect

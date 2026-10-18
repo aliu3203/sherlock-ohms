@@ -37,7 +37,7 @@ function updateControls() {
   $('live-button').classList.toggle('secondary', state.running);
   $('camera-indicator').classList.toggle('on', camera);
   $('feed-dot').classList.toggle('on', state.running);
-  $('feed-label').textContent = state.running ? 'LIVE · FRESH FRAMES' : state.source === 'photo' && state.result ? 'PHOTO INSPECTION' : camera ? 'CAMERA CONNECTED' : 'AWAITING INPUT';
+  $('feed-label').textContent = state.running ? 'LIVE · FRESH FRAMES' : state.result?.saved ? 'SAVED INSPECTION' : state.source === 'photo' && state.result ? 'PHOTO INSPECTION' : camera ? 'CAMERA CONNECTED' : 'AWAITING INPUT';
   $('capture-copy').textContent = state.running ? 'Watching your connections. Keep all four markers visible.' : camera ? !state.setupId ? 'Camera connected. Take a photo to detect wire and resistor endpoints.' : !state.referenceId ? 'Take a photo for endpoint detection, or choose a reference for wiring checks.' : 'Camera connected. Take a photo or start a live check.' : 'Camera is off. Your workspace is ready.';
   $('reference-select').disabled = state.running || state.busy; $('setup-select').disabled = state.running || state.busy;
 }
@@ -161,7 +161,7 @@ function renderResult() {
   $('verdict-panel').dataset.tone = presentation.tone;
   $('verdict-title').textContent = presentation.title; $('verdict-symbol').textContent = presentation.symbol;
   $('verdict-message').textContent = presentation.message; $('verdict-bottom').textContent = presentation.label;
-  $('result-kind').textContent = state.running ? 'LIVE CHECK' : result?.mode === 'still' ? 'PHOTO CHECK' : result ? 'ENDPOINT PREVIEW' : 'NO INPUT';
+  $('result-kind').textContent = state.running ? 'LIVE CHECK' : result?.saved ? 'FROM HISTORY' : result?.mode === 'still' ? 'PHOTO CHECK' : result ? 'ENDPOINT PREVIEW' : 'NO INPUT';
   $('stability').hidden = !state.running || !result || presentation.expired;
   const frames = result?.stable_frames || 0, required = result?.required_stable_frames || 3;
   $('stability-count').textContent = `${Math.min(frames, required)} / ${required}`;
@@ -276,9 +276,23 @@ async function loadHistory() {
     $('history-list').innerHTML = inspections.length ? inspections.map(item => {
       const date = new Date(item.created_at), status = item.status || 'UNCERTAIN';
       const tone = status === 'CORRECT' ? 'green' : status === 'INCORRECT' ? 'red' : '';
-      return `<div class="history-row"><div><strong>${esc(item.mode === 'preview' ? 'Endpoint preview' : item.mode === 'still' ? 'Photo inspection' : 'Live inspection')}</strong><small>${esc(item.message)}</small></div><span class="result-badge ${tone}">${esc(status === 'CORRECT' ? 'MATCHED AT CAPTURE' : status === 'INCORRECT' ? 'MISMATCH AT CAPTURE' : status)}</span><span>${(item.parts?.length || item.detections?.length || 0).toString().padStart(2,'0')}</span><time datetime="${esc(item.created_at)}">${esc(date.toLocaleDateString(undefined,{month:'short',day:'numeric'}))}<br>${esc(date.toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'}))}</time></div>`;
+      return `<button type="button" class="history-row" data-inspection="${esc(item.id)}"><div><strong>${esc(inspectionKind(item.mode))}</strong><small>${esc(item.message)}</small></div><span class="result-badge ${tone}">${esc(status === 'CORRECT' ? 'MATCHED AT CAPTURE' : status === 'INCORRECT' ? 'MISMATCH AT CAPTURE' : status)}</span><span>${(item.parts?.length || item.detections?.length || 0).toString().padStart(2,'0')}</span><time datetime="${esc(item.created_at)}">${esc(date.toLocaleDateString(undefined,{month:'short',day:'numeric'}))}<br>${esc(date.toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'}))}</time></button>`;
     }).join('') : '<div class="quiet-empty">No inspections yet. Your first connection is a good place to start.</div>';
   } catch (error) {notice(errorText(error));} finally {$('refresh-history').disabled = false;}
+}
+function inspectionKind(mode) {return mode === 'preview' ? 'Endpoint preview' : mode === 'still' ? 'Photo inspection' : 'Live inspection';}
+async function openInspection(id) {
+  if (state.busy) return;
+  setBusy(true);
+  try {
+    const result = await api(`/inspections/${encodeURIComponent(id)}`);
+    stopLive(); disconnectCamera(); setSource('photo');
+    state.result = {...result, saved:true}; state.capturedAt = 0;
+    location.hash = 'inspect';
+    const date = new Date(result.created_at);
+    const when = Number.isNaN(date.getTime()) ? '' : ` · ${date.toLocaleString(undefined,{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'})}`;
+    showResultImage(result, `SAVED ${inspectionKind(result.mode).toUpperCase()}${when}`); renderResult();
+  } catch (error) {notice(errorText(error));} finally {setBusy(false);}
 }
 function renderIllustration() {
   const holes = []; for (let row=0;row<10;row++) for (let col=0;col<30;col++) holes.push(`<rect x="${32+col*11}" y="${row<5?40+row*9:104+(row-5)*9}" width="2.7" height="3.2" rx=".5" fill="#7e8778" opacity=".7"/>`);
@@ -299,6 +313,7 @@ $('reset-anchors').addEventListener('click',()=>{state.anchors={};drawCalibratio
 $('add-part').addEventListener('click',()=>addPart({from:'',to:''})); $('reference-form').addEventListener('submit',saveReference);
 $('reference-library').addEventListener('click',event=>{const button=event.target.closest('[data-reference]');if(!button)return;state.referenceId=button.dataset.reference;savePreference('sherlock.live.reference',state.referenceId);$('reference-select').value=state.referenceId;location.hash='inspect';updateControls();});
 $('refresh-history').addEventListener('click',loadHistory);
+$('history-list').addEventListener('click',event=>{const row=event.target.closest('[data-inspection]');if(row)openInspection(row.dataset.inspection);});
 $('connection-settings').addEventListener('click',()=>{$('api-address').value=state.backend;$('connection-dialog').showModal();});
 $('save-connection').addEventListener('click',async()=>{if(state.busy)return;const address=$('api-address').value.trim().replace(/\/$/,'');try{if(address){const url=new URL(address);if(!['http:','https:'].includes(url.protocol)||url.username||url.password||url.search||url.hash)throw new Error('Use an HTTP or HTTPS backend address without credentials, query, or fragment.');}stopLive();disconnectCamera();setBusy(true);state.backend=address;state.setupId='';state.referenceId='';state.result=null;state.calibration=null;state.anchors={};$('calibration-canvas').hidden=true;$('calibration-placeholder').hidden=false;renderAnchors();savePreference('sherlock.live.backend',address);$('connection-dialog').close();$('notice').hidden=true;renderResult();await refreshStatus();}catch(error){notice(errorText(error));}finally{setBusy(false);}});
 window.addEventListener('hashchange',navigate); document.addEventListener('visibilitychange',()=>{if(document.hidden)stopLive();});

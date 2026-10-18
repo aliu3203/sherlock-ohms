@@ -23,7 +23,7 @@ from typing import Any, AsyncIterator, Callable, Literal
 import cv2
 import numpy as np
 from fastapi import Body, FastAPI, HTTPException, Request, status
-from fastapi.responses import FileResponse, Response
+from fastapi.responses import FileResponse, RedirectResponse, Response
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 from sse_starlette.sse import EventSourceResponse
@@ -352,7 +352,11 @@ def _register_routes(app: FastAPI) -> None:
     static_dir = Path(__file__).resolve().parent / "static"
     app.mount("/static", StaticFiles(directory=static_dir), name="static")
 
-    @app.get("/", response_class=FileResponse, include_in_schema=False)
+    @app.get("/", include_in_schema=False)
+    def root() -> RedirectResponse:
+        return RedirectResponse("/live", status_code=status.HTTP_307_TEMPORARY_REDIRECT)
+
+    @app.get("/classic", response_class=FileResponse, include_in_schema=False)
     def dashboard() -> FileResponse:
         return FileResponse(static_dir / "index.html")
 

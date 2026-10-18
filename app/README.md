@@ -1,8 +1,9 @@
 # Sherlock Ohms web workspace
 
 The new workspace is at **http://127.0.0.1:8000/live**. It uses the trained
-wire/resistor endpoint detector and patch refiner. The previous dashboard remains
-at `/` and has a link to Live wiring.
+wire/resistor endpoint detector and patch refiner. `/` redirects here. The
+previous dashboard and its browser demo moved to `/classic`; each links to the
+other.
 
 Start from the repository root:
 

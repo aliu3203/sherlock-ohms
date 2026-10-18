@@ -5,6 +5,7 @@ export const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, char 
 export function presentVerdict(result, {live = false, now = 0, capturedAt = 0} = {}) {
   if (!result) return {tone:'neutral', title:'Ready when you are.', symbol:'⌁', message:'Connect a camera or add a photo to see what’s on your board.', label:'No circuit verdict yet'};
   const status = result.status;
+  if (result.saved) return {tone:'neutral', title:'A saved inspection.', symbol:'◷', message:result.message || 'No message was saved with this inspection.', label:status === 'CORRECT' ? 'Matched at capture · not a current verdict' : status === 'INCORRECT' ? 'Mismatch at capture · not a current verdict' : `${status || 'Uncertain'} at capture · not a current verdict`};
   const fresh = live && Number.isFinite(capturedAt) && now >= capturedAt && now - capturedAt <= Math.min(2000, Math.max(0, Number(result.valid_for_ms) || 2000));
   if (live && !fresh) return {tone:'amber', title:'Waiting for a fresh frame.', symbol:'⌁', message:'The last live result has expired. Keep the camera running for current feedback.', label:'Expired · no current verdict', expired:true};
   if (fresh && result.mode !== 'still' && status === 'CORRECT' && result.passed === true && result.stable_frames >= Math.max(2, result.required_stable_frames || 3)) return {tone:'green', title:'A good connection.', symbol:'✓', message:result.message, label:'Visible connectivity matches'};

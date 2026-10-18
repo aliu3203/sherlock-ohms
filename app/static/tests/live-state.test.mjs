@@ -25,6 +25,11 @@ test('expired incorrect verdict and unknown status cannot masquerade as current 
   assert.equal(presentVerdict({...correct,status:'INCORRECT',passed:false},{live:true,capturedAt:10,now:2011}).tone,'amber');
   assert.equal(presentVerdict({...correct,status:'UNRECOGNIZED'},{live:true,capturedAt:10,now:200}).tone,'amber');
 });
+test('saved history results never present as a current verdict', () => {
+  const saved = presentVerdict({...correct, saved:true}, {live:true, capturedAt:100, now:500});
+  assert.equal(saved.tone,'neutral'); assert.match(saved.label,/at capture · not a current verdict/);
+  assert.match(presentVerdict({...correct, status:'INCORRECT', saved:true}).label,/Mismatch at capture/);
+});
 test('equivalent strip holes remain valid reference inputs but duplicate physical holes fail', () => {
   const reference = makeReference('  Two wires  ',[{type:'wire',from:' A1 ',to:'a5'},{type:'wire',from:'b5',to:'a8'}],{VCC:'e1',GND:''});
   assert.equal(reference.name,'Two wires'); assert.deepEqual(reference.terminals,{VCC:'e1'});
