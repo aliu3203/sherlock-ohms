@@ -1,0 +1,65 @@
+{
+  "weights": "/Users/danielxiao/Desktop/sherlock-ohms/evaluation/endpoint_training_20261017/runs/wire_resistor/weights/best.pt",
+  "test_metrics": {
+    "metrics/precision(B)": 0.6080797902737098,
+    "metrics/recall(B)": 0.7428571428571429,
+    "metrics/mAP50(B)": 0.706992818301635,
+    "metrics/mAP50-95(B)": 0.3887629000648153,
+    "metrics/precision(P)": 0.732838842831891,
+    "metrics/recall(P)": 0.6534700134478176,
+    "metrics/mAP50(P)": 0.7317520675716669,
+    "metrics/mAP50-95(P)": 0.5052686689167527,
+    "fitness": 0.894031568981568
+  },
+  "limitations": [
+    "Only wire and resistor; no LEDs",
+    "Small dataset; session grouping is approximate",
+    "Pose AP is not hole accuracy or circuit correctness"
+  ],
+  "training_status": "complete",
+  "epochs_completed": 31,
+  "best_epoch": 19,
+  "stop_reason": "Validation fitness did not improve for 12 epochs",
+  "dataset_counts": {
+    "train": 245,
+    "val": 41,
+    "test": 20
+  },
+  "application_evaluation": {
+    "pipeline": "Existing BreadboardPoseDetector, mock=False",
+    "image_count": 20,
+    "box_confidence": 0.4,
+    "keypoint_confidence": 0.5,
+    "matching_iou": 0.5,
+    "matching": "One-to-one same-class boxes; endpoint order ignored; both GT points must be labeled",
+    "limitation": "Endpoint errors are conditional on matched detections; misses are reported separately. Test frames are correlated.",
+    "classes": {
+      "wire": {
+        "true_positive": 36,
+        "false_positive": 7,
+        "missed_objects": 13,
+        "matched_pairs_scored": 36,
+        "precision": 0.8372093023255814,
+        "recall": 0.7346938775510204,
+        "endpoint_mean_px": 33.136490920003716,
+        "endpoint_median_px": 25.98158978287557,
+        "endpoint_p90_px": 59.19319955872937,
+        "endpoints_within_10px_fraction": 0.1111111111111111
+      },
+      "resistor": {
+        "true_positive": 15,
+        "false_positive": 14,
+        "missed_objects": 55,
+        "matched_pairs_scored": 15,
+        "precision": 0.5172413793103449,
+        "recall": 0.21428571428571427,
+        "endpoint_mean_px": 28.95910900326721,
+        "endpoint_median_px": 27.322683034817345,
+        "endpoint_p90_px": 50.10455453537881,
+        "endpoints_within_10px_fraction": 0.03333333333333333
+      }
+    }
+  },
+  "weights_sha256": "bac225fadddef1bcc71f82d03ea7ca5c78e5e797a8bebee400fb4ab7dbebc531",
+  "readiness": "Prototype detector only; not ready for dependable per-hole wiring feedback"
+}

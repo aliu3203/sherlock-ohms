@@ -1,0 +1,8 @@
+# Set path to your absolute dataset root before training.
+path: datasets/breadboard
+train: images/train
+val: images/val
+test: images/test
+kpt_shape: [2, 3]
+flip_idx: [0, 1]
+names: {0: wire, 1: resistor, 2: led}

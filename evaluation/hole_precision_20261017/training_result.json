@@ -1,0 +1,15 @@
+{
+  "weights": "/Users/danielxiao/Desktop/sherlock-ohms/evaluation/hole_precision_20261017/runs/nano_endpoints/weights/best.pt",
+  "parameters": 2662152,
+  "test_metrics": {
+    "metrics/precision(B)": 0.9604825450695428,
+    "metrics/recall(B)": 0.9120587613612343,
+    "metrics/mAP50(B)": 0.9529192339645445,
+    "metrics/mAP50-95(B)": 0.7093179560048155,
+    "metrics/precision(P)": 0.9357164119311758,
+    "metrics/recall(P)": 0.8814219151604776,
+    "metrics/mAP50(P)": 0.9069276951090932,
+    "metrics/mAP50-95(P)": 0.8358162182928321,
+    "fitness": 1.5451341742976477
+  }
+}

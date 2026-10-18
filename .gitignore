@@ -1,0 +1,36 @@
+# Local environment, credentials, camera state, and caches.
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+!.env.example
+.local-data/
+*.sqlite*
+*.db
+*.db-wal
+*.db-shm
+/tmp/
+*.log
+debug_*.png
+
+# Downloaded datasets and intermediate model artifacts are reproducible.
+dataset/
+datasets/
+runs/
+*.pt
+*_ncnn_model/
+
+# Bulk diagnostic copies of datasets from earlier experiments.
+/evaluation/circuit_v5_smoke_20261017/numbered_keypoints/
+/evaluation/circuit_v5_smoke_20261017/resistor_crops/
+/evaluation/circuit_v5_smoke_20261017/resistor_review.png
+/evaluation/endpoint_training_20261017/application_predictions/*.png
+/evaluation/endpoint_training_20261017/application_predictions/*.jpg
+/evaluation/endpoint_training_20261017/application_evaluation/*.png
+/evaluation/endpoint_training_20261017/application_evaluation/*.jpg
+/evaluation/endpoint_training_20261017/label_audit.jpg
+
+# The two final inference checkpoints are intentionally tracked with git add -f.

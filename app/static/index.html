@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101512">
+  <meta name="description" content="Sherlock Ohms breadboard circuit inspection workbench.">
+  <title>Sherlock Ohms — Inspection workbench</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23bce895'/%3E%3Ctext x='6' y='30' font-size='30' fill='%23101512'%3EΩ%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script type="module" src="/static/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to workspace</a>
+  <header class="topbar">
+    <a class="brand" href="#inspect" aria-label="Sherlock Ohms home"><span class="brand-mark">Ω</span><span>Sherlock Ohms<small>CIRCUIT INSPECTION WORKBENCH</small></span></a>
+    <nav aria-label="Main navigation">
+      <a href="/live" class="nav-link">Live wiring ↗</a>
+      <a href="#inspect" data-view="inspect" class="nav-link active" aria-current="page"><span>01</span> Inspect</a>
+      <a href="#history" data-view="history" class="nav-link"><span>02</span> History</a>
+      <a href="#references" data-view="references" class="nav-link"><span>03</span> References</a>
+      <a href="#calibration" data-view="calibration" class="nav-link"><span>04</span> Calibration</a>
+    </nav>
+    <label class="mode-switch"><input id="demo-toggle" type="checkbox" role="switch" checked><span class="switch-track" aria-hidden="true"></span><span>Demo mode<small>SIMULATED INPUT</small></span></label>
+  </header>
+  <main id="main" tabindex="-1">
+    <div class="workspace-meta"><span><i class="status-dot" id="connection-dot"></i><span id="connection-status">Browser simulation · no camera required</span></span><span class="mono">SHERLOCK / WORKBENCH <span class="muted">v1.0</span></span></div>
+    <div id="notice" class="notice" role="status" hidden></div>
+    <section id="view-inspect" class="view" aria-labelledby="inspect-title">
+      <div class="page-heading"><div><p class="eyebrow">TRACE. COMPARE. VERIFY.</p><h1 id="inspect-title">Confidence in every connection<span>.</span></h1><p>From breadboard to verdict. Find the fault before you power on.</p></div><span class="tag">830-POINT BOARD</span></div>
+      <div class="inspection-controls panel">
+        <label>Reference circuit<select id="reference-select" aria-label="Reference circuit"></select></label>
+        <label>Verification mode<select id="verification-mode"><option value="connectivity">Connectivity · equivalent circuits</option><option value="placement">Placement · exact hole positions</option></select></label>
+        <button id="inspect-button" class="button primary"><span aria-hidden="true">⌕</span> Inspect board <kbd>↵</kbd></button>
+      </div>
+      <div class="demo-scenarios" id="demo-scenarios"><span class="eyebrow">TRY A SCENARIO</span><div role="group" aria-label="Demo scenarios"><button data-scenario="exact" class="scenario active" aria-pressed="true">✓ Correct circuit</button><button data-scenario="short" class="scenario" aria-pressed="false">ϟ Power short</button><button data-scenario="reversed" class="scenario" aria-pressed="false">⇄ Reversed LED</button><button data-scenario="offbyone" class="scenario" aria-pressed="false">↗ Off-by-one row</button><button data-scenario="equivalent" class="scenario" aria-pressed="false">≈ Equivalent layout</button></div></div>
+      <div class="inspection-layout">
+        <div class="board-column">
+          <article class="panel board-panel">
+            <header class="panel-header"><div><span class="eyebrow">BOARD WORKSPACE</span><h2>Rectified view <span id="image-source-label" class="micro-tag">SIMULATION</span></h2></div><div class="board-tools"><label class="check-label"><input id="grid-toggle" type="checkbox" checked> Hole grid</label><button class="icon-button" id="clear-focus" title="Clear highlighted finding" aria-label="Clear highlighted finding">⌖</button></div></header>
+            <div class="board-stage" id="board-stage"><div class="board-registration-label"><span>↳ REGISTERED PLANE</span><span id="board-hint">Run an inspection to trace the circuit</span></div><div class="board-canvas"><img id="board-image" src="/static/board-base.svg" width="1400" height="520" alt="Simulated empty breadboard viewed from above"><svg id="board-overlay" viewBox="0 0 1400 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interactive circuit inspection overlay"><title>Circuit overlay</title><g id="grid-layer"></g><g id="component-layer"></g><g id="outline-layer"></g><g id="focus-layer"></g></svg></div><div class="board-axis"><span>01</span><span>15</span><span>30</span><span>45</span><span>63</span></div></div>
+            <footer class="board-footer"><div class="legend"><span><i class="legend-dot valid"></i>Matched</span><span><i class="legend-dot critical"></i>Critical</span><span><i class="legend-dot warning"></i>Warning</span><span><i class="legend-dot uncertain"></i>Uncertain</span></div><span class="mono">1400 × 520 PX</span></footer>
+          </article>
+          <article class="panel progress-panel"><div class="progress-header"><h2>Inspection pipeline</h2><span id="progress-status" role="status" aria-live="polite">Ready when you are</span></div><div id="progress-track" class="progress-track" role="progressbar" aria-label="Inspection progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progress-fill"></span></div><ol class="steps"><li data-step="0"><b>01</b> Capture & quality</li><li data-step="1"><b>02</b> Detect components</li><li data-step="2"><b>03</b> Reconstruct circuit</li><li data-step="3"><b>04</b> Verify reference</li></ol></article>
+        </div>
+        <aside class="results-column" aria-label="Inspection results"><article class="panel verdict-panel" id="verdict-panel"><span class="eyebrow">INSPECTION RESULT</span><div id="verdict-badge" class="verdict-badge idle" role="status" aria-live="polite"><span class="verdict-symbol">◎</span><span id="verdict-label">READY</span></div><p id="verdict-summary">Your next circuit, under the lens.</p><div class="result-metrics"><div><strong id="part-count">—</strong><span>COMPONENTS</span></div><div><strong id="finding-count">—</strong><span>FINDINGS</span></div><div><strong id="inspection-time">—</strong><span>ELAPSED</span></div></div><div id="result-provenance" class="result-provenance">Demo results are simulated in your browser.</div></article>
+        <article class="panel findings-panel"><header class="panel-header"><h2>Findings <span id="findings-counter" class="counter">0</span></h2><span class="muted small">HOVER TO LOCATE</span></header><div id="findings-list" class="findings-list"><div class="empty-state"><span class="empty-icon">⌁</span><strong>Let’s connect the dots.</strong><p>Run an inspection. We’ll show what’s right, what’s wrong, and where to look.</p></div></div></article></aside>
+      </div>
+      <p class="workspace-note"><span>◈</span> Inspect visually before applying power. Connectivity checks do not measure component values or electrical behavior.</p>
+    </section>
+    <section id="view-history" class="view" aria-labelledby="history-title" hidden><div class="page-heading"><div><p class="eyebrow">THE INSPECTION LOG</p><h1 id="history-title">A record of every connection<span>.</span></h1><p>Review past results and return to their board overlays.</p></div><button id="refresh-history" class="button secondary">↻ Refresh</button></div><div class="panel table-container"><table><thead><tr><th>Inspection</th><th>Reference circuit</th><th>Mode</th><th>Source</th><th>Result</th><th><span class="sr-only">Action</span></th></tr></thead><tbody id="history-body"></tbody></table><div id="history-empty" class="empty-state"><strong>No inspections yet.</strong><p>Your inspection history will appear here.</p></div></div></section>
+    <section id="view-references" class="view" aria-labelledby="references-title" hidden><div class="page-heading"><div><p class="eyebrow">YOUR GOLDEN CIRCUITS</p><h1 id="references-title">Start with a known good<span>.</span></h1><p>Save a circuit definition to compare placements and connections.</p></div></div><div class="reference-layout"><div class="panel"><header class="panel-header"><h2>Saved references</h2><span id="references-count" class="counter">0</span></header><div id="references-list" class="references-list"></div></div><form id="reference-form" class="panel reference-form"><h2>Add a reference</h2><p class="muted">Paste a circuit definition or upload a JSON file.</p><label>Reference name<input id="reference-name" required maxlength="120" placeholder="e.g. LED with current-limiting resistor"></label><label>Upload JSON<input id="reference-file" type="file" accept=".json,application/json"></label><label>Circuit definition<textarea id="reference-json" rows="12" spellcheck="false" required aria-describedby="reference-format"></textarea></label><p id="reference-format" class="small muted">Expected: name, rails, and parts with id, type, and pins. Maximum 256 KB.</p><div id="reference-error" class="form-error" role="alert"></div><button type="submit" class="button primary">＋ Save reference</button></form></div></section>
+    <section id="view-calibration" class="view" aria-labelledby="calibration-title" hidden><div class="page-heading"><div><p class="eyebrow">SET THE FRAME OF REFERENCE</p><h1 id="calibration-title">Precision starts here<span>.</span></h1><p>Register the board, establish the baseline, and align the hole grid.</p></div></div><div class="calibration-layout"><article class="panel calibration-card"><div class="calibration-glyph" aria-hidden="true">⌖</div><h2>Board registration</h2><p>Keep the board empty and all four ArUco markers visible. Use steady lighting and a fixed camera position.</p><button id="calibrate-button" class="button primary">Calibrate board →</button><p id="calibration-message" role="status" aria-live="polite">Demo mode uses an illustrative grid.</p></article><article class="panel"><header class="panel-header"><h2>Grid lookup table</h2><span id="calibration-badge" class="micro-tag">NOT CALIBRATED</span></header><dl class="calibration-stats"><div><dt>Registration markers</dt><dd>DICT_4X4_50 · IDs 0–3</dd></div><div><dt>Rectified dimensions</dt><dd>1400 × 520 px</dd></div><div><dt>Metric scale</dt><dd>8.0 px / mm</dd></div><div><dt>Mapped holes</dt><dd id="lut-count">—</dd></div><div><dt>Last calibrated</dt><dd id="calibration-date">—</dd></div><div><dt>Source</dt><dd id="calibration-source">Browser simulation</dd></div></dl></article></div></section>
+    <footer class="page-footer"><span><b>Ω</b> SHERLOCK OHMS</span><span>A little deduction. A better connection.</span><span id="footer-mode">SIMULATION WORKSPACE</span></footer>
+  </main>
+  <noscript><p class="notice">JavaScript is required for inspections and interactive overlays.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,88 @@
+Circuit Detection v5 smoke-test readiness audit
+Status: BLOCKED_NO_COMPATIBLE_WEIGHTS. No inference or training performed.
+
+Instructions and concurrent changes
+No AGENTS.md found in this repository or its ancestor paths.
+Existing work includes an already deleted root README.md and untracked application,
+engine, vision, tests, and other files. None were overwritten. All audit outputs
+are confined to evaluation/circuit_v5_smoke_20261017.
+
+Weight search and pipeline
+Searched repository (including ignored/hidden paths, excluding dependencies),
+the dataset, Desktop and Downloads for common model artifacts. No YOLO .pt,
+ONNX or NCNN model found; SHERLOCK_MODEL_PATH is unset. Unrelated Gazebo .pth
+files belong to DDPG Actor networks according to their source; not pose models.
+Expected trained artifact: breadboard pose best.pt or an exported NCNN folder,
+with names {0:wire,1:resistor,2:led}, keypoint shape [2,3].
+The referenced vision_ml/runs/breadboard/weights paths do not exist.
+train_pose.py is a training recipe, not evidence of a trained checkpoint.
+BreadboardPoseDetector without a path returns mock empty detections. We did
+not count mock results as model predictions.
+
+Preprocessing reviewed, not executed for inference
+The detector resizes with round(width*ratio), round(height*ratio), centers padding
+to 1280x480, passes imgsz=(480,1280), rect=False to Ultralytics, then unmaps using
+separate actual rounded x/y scales and padding. For 640x640 inputs its first
+letterbox would resize to 480x480 and pad 400 pixels on each horizontal side.
+Its defaults are box confidence .40, NMS IoU .50, both keypoints confidence .50.
+A future evaluation must call this actual detector, not substitute a warp or
+treat these 640x640 stretched photographs as 1400x520 calibrated board images.
+
+Dataset and endpoint audit
+27 train images, all 640x640; 27 breadboards, 372 resistors, 503 wires, no LEDs.
+No validation or test directories. Dataset README says images were stretched
+to 640x640. Annotation file SHA256 inventory is in audit.json, along with all
+other dataset files. Hashes were unchanged before and after the audit.
+Classes remapped by name: wire 2 -> 0, resistor 1 -> 1, breadboard 0 excluded.
+No LEDs inferred or invented.
+Reviewed eight numbered resistor crops spanning multiple photos: indices 0,3
+are lead insertion endpoints and 1,2 body ends in the visible examples.
+Short-lead/occluded examples remain ambiguous; mapping is sample-verified,
+not a certification of every annotation. Wires have visible indices 0,1.
+component_ground_truth.json preserves original boxes, pixel coordinates and
+visibility, excluding breadboards. No modified training labels are installed.
+
+Metrics
+Wire/resistor precision, recall, endpoint error, and missed-object counts: N/A,
+not zero. No predictions exist. No matching threshold was applied.
+Proposed future protocol (NOT executed): per-class maximum-cardinality one-to-one
+assignment gated by original-coordinate box IoU >= .50, then maximum total IoU.
+Report unmatched GT as misses, unmatched predictions as false positives.
+For matched objects, minimize the sum of the two Euclidean endpoint errors over
+both permutations; report mean/median/p95 pixels and sample count. No endpoint
+distance gate that would hide bad localization. Inspect skinny original boxes
+before relying on IoU scoring; changing their definition must be documented.
+Observed: 231 resistor boxes and 104 wire boxes have a side <=2 pixels.
+The reviewed wire-heavy photo also has external wires ending at image edges;
+wire endpoint annotations do not universally imply two breadboard insertions.
+Existing evaluate_classical.py scores snapped hole IDs, not this pixel GT, so
+it is not directly a dataset pose evaluator.
+
+Artifacts
+numbered_keypoints/: 27 full-image numbered GT overlays.
+resistor_crops/: magnified resistor annotation crops.
+resistor_review.png: eight representative crops inspected visually.
+annotations_numbered.json: all original numbered keypoints in image pixels.
+component_ground_truth.json: component-only two-endpoint GT, remapped by name.
+audit.json: counts, hashes, null metrics and blocking status.
+No prediction/confidence overlays or model failure examples can be produced
+without a model; GT overlays are explicitly labelled as such.
+
+Other blockers and next step
+The classical detector needs a genuine same-setup empty baseline, aligned
+1400x520 images. This dataset supplies no paired empty baseline/calibration.
+No baseline, calibration, QR or ArUco markers were fabricated.
+Current registration requires ArUco IDs 0..3 (not QR codes).
+Next concrete marker-free classical test: acquire an overhead empty-board and
+populated image without moving camera/board, plus at least three empty frames.
+In a separate evaluation utility, manually select the same physical reference
+holes/corners, establish a shared 1400x520 warp, and save the genuine empty median.
+Then invoke ClassicalBreadboardDetector directly, bypassing marker-dependent
+registration only in that evaluation. This has not been implemented here.
+Alternatively supply the trained compatible pose checkpoint to run direct
+image-space detection without marker registration or an empty baseline.
+Without training provenance, any subsequent dataset evaluation is a smoke test,
+not generalization evidence. No LED or electrical correctness claims.
+
+Exact command executed from /Users/danielxiao/Desktop/sherlock-ohms:
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python evaluation/circuit_v5_smoke_20261017/audit_dataset.py --dataset /Users/danielxiao/Downloads/sherlock-ohms-datasets/bme-circuit-detection-v5 --output evaluation/circuit_v5_smoke_20261017 --resistor-endpoints 0 3

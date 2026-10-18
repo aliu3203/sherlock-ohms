@@ -1,0 +1,125 @@
+{
+  "checks_passed": 9,
+  "checks_failed": 0,
+  "cases": [
+    {
+      "case": "exact_match",
+      "check": "OK",
+      "circuit_passed": true,
+      "light": "GREEN",
+      "findings": [],
+      "gpio_transitions": [
+        "YELLOW",
+        "GREEN"
+      ],
+      "vf2_calls": 1
+    },
+    {
+      "case": "equivalent_connectivity",
+      "check": "OK",
+      "circuit_passed": true,
+      "light": "GREEN",
+      "findings": [],
+      "gpio_transitions": [
+        "YELLOW",
+        "GREEN"
+      ],
+      "vf2_calls": 1
+    },
+    {
+      "case": "equivalent_placement",
+      "check": "OK",
+      "circuit_passed": false,
+      "light": "RED",
+      "findings": [
+        "MISPLACED_PIN"
+      ],
+      "gpio_transitions": [
+        "YELLOW",
+        "RED"
+      ],
+      "vf2_calls": 1
+    },
+    {
+      "case": "power_short",
+      "check": "OK",
+      "circuit_passed": false,
+      "light": "RED",
+      "findings": [
+        "OPEN_CONNECTION",
+        "POWER_SHORT"
+      ],
+      "gpio_transitions": [
+        "YELLOW",
+        "RED"
+      ],
+      "vf2_calls": 2
+    },
+    {
+      "case": "open_connection",
+      "check": "OK",
+      "circuit_passed": false,
+      "light": "RED",
+      "findings": [
+        "DANGLING_WIRE",
+        "OPEN_CONNECTION"
+      ],
+      "gpio_transitions": [
+        "YELLOW",
+        "RED"
+      ],
+      "vf2_calls": 2
+    },
+    {
+      "case": "quality_brightness",
+      "check": "OK",
+      "aborted": true,
+      "quality_failures": [
+        "sharpness",
+        "brightness"
+      ],
+      "gpio_transitions": [
+        "YELLOW",
+        "RED"
+      ]
+    },
+    {
+      "case": "quality_sharpness",
+      "check": "OK",
+      "aborted": true,
+      "quality_failures": [
+        "sharpness"
+      ],
+      "gpio_transitions": [
+        "YELLOW",
+        "RED"
+      ]
+    },
+    {
+      "case": "quality_glare",
+      "check": "OK",
+      "aborted": true,
+      "quality_failures": [
+        "glare"
+      ],
+      "gpio_transitions": [
+        "YELLOW",
+        "RED"
+      ]
+    },
+    {
+      "case": "quality_markers",
+      "check": "OK",
+      "aborted": true,
+      "quality_failures": [
+        "markers"
+      ],
+      "gpio_transitions": [
+        "YELLOW",
+        "RED"
+      ]
+    }
+  ],
+  "debug_image": "/Users/danielxiao/Desktop/sherlock-ohms/debug_last_inspection.png",
+  "scope": "Synthetic camera scene and mock detections; real OpenCV, engine, VF2, and GPIO fallback."
+}

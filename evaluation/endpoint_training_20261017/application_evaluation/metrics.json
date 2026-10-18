@@ -1,0 +1,35 @@
+{
+  "pipeline": "Existing BreadboardPoseDetector, mock=False",
+  "image_count": 20,
+  "box_confidence": 0.4,
+  "keypoint_confidence": 0.5,
+  "matching_iou": 0.5,
+  "matching": "One-to-one same-class boxes; endpoint order ignored; both GT points must be labeled",
+  "limitation": "Endpoint errors are conditional on matched detections; misses are reported separately. Test frames are correlated.",
+  "classes": {
+    "wire": {
+      "true_positive": 36,
+      "false_positive": 7,
+      "missed_objects": 13,
+      "matched_pairs_scored": 36,
+      "precision": 0.8372093023255814,
+      "recall": 0.7346938775510204,
+      "endpoint_mean_px": 33.136490920003716,
+      "endpoint_median_px": 25.98158978287557,
+      "endpoint_p90_px": 59.19319955872937,
+      "endpoints_within_10px_fraction": 0.1111111111111111
+    },
+    "resistor": {
+      "true_positive": 15,
+      "false_positive": 14,
+      "missed_objects": 55,
+      "matched_pairs_scored": 15,
+      "precision": 0.5172413793103449,
+      "recall": 0.21428571428571427,
+      "endpoint_mean_px": 28.95910900326721,
+      "endpoint_median_px": 27.322683034817345,
+      "endpoint_p90_px": 50.10455453537881,
+      "endpoints_within_10px_fraction": 0.03333333333333333
+    }
+  }
+}

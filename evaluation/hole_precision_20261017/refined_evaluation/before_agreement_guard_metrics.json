@@ -1,0 +1,406 @@
+{
+  "weights": "/Users/danielxiao/Desktop/sherlock-ohms/evaluation/hole_precision_20261017/runs/nano_endpoints/weights/best.pt",
+  "sha256": "1fd8774278d5b60f7f40eb46e3e8944b764eaf8dac1feaaa488e5eb124c18122",
+  "refiner": "evaluation/hole_precision_20261017/refiner/best.pt",
+  "images": 110,
+  "confidence": 0.6,
+  "matching_iou": 0.5,
+  "classes_by_source": {
+    "circuit:wire": {
+      "truth": 49,
+      "predicted": 1,
+      "matched": 1,
+      "precision": 1.0,
+      "recall": 0.02040816326530612,
+      "missed": 48,
+      "false_positive": 0,
+      "endpoint_median_px": 7.792412340639148,
+      "endpoint_p90_px": 13.083377581579919,
+      "endpoint_within_5px_fraction": 0.5
+    },
+    "circuit:resistor": {
+      "truth": 70,
+      "predicted": 0,
+      "matched": 0,
+      "precision": null,
+      "recall": 0.0,
+      "missed": 70,
+      "false_positive": 0,
+      "endpoint_median_px": null,
+      "endpoint_p90_px": null,
+      "endpoint_within_5px_fraction": null
+    },
+    "ohm:wire": {
+      "truth": 141,
+      "predicted": 96,
+      "matched": 96,
+      "precision": 1.0,
+      "recall": 0.6808510638297872,
+      "missed": 45,
+      "false_positive": 0,
+      "endpoint_median_px": 1.0855679086743768,
+      "endpoint_p90_px": 3.0689689888544796,
+      "endpoint_within_5px_fraction": 0.9166666666666666
+    },
+    "ohm:resistor": {
+      "truth": 179,
+      "predicted": 140,
+      "matched": 139,
+      "precision": 0.9928571428571429,
+      "recall": 0.776536312849162,
+      "missed": 40,
+      "false_positive": 1,
+      "endpoint_median_px": 0.9729683965601796,
+      "endpoint_p90_px": 1.730599551164055,
+      "endpoint_within_5px_fraction": 0.960431654676259
+    }
+  },
+  "device": "cpu",
+  "image_size": "native long edge capped at 1280",
+  "inference_ms_median_excluding_first": 77.07770799606806,
+  "inference_ms_p90_excluding_first": 145.4710750025697,
+  "hole_proxy": [
+    {
+      "image": "ohm_img_210_jpg.rf.f998083bf099e919304e3ac50a79b835.jpg",
+      "manual_anchors": [
+        [
+          33,
+          215
+        ],
+        [
+          605,
+          215
+        ],
+        [
+          606,
+          429
+        ],
+        [
+          31,
+          429
+        ]
+      ],
+      "truth_objects": 7,
+      "grid_observation": {
+        "passed": true,
+        "matched": 256,
+        "coverage": 0.8533333333333334,
+        "median_error_px": 0.4048574835891914,
+        "column_span_fraction": 1.0,
+        "boundary_holes": {
+          "first_column": 3,
+          "last_column": 6,
+          "row_a": 24,
+          "row_j": 21
+        }
+      },
+      "eligible_truth": 7,
+      "exact_pair_agreements": 6,
+      "matched_predictions_with_two_accepted_holes": 6,
+      "wrong_accepted_pairs": 0
+    },
+    {
+      "image": "ohm_img_230_jpg.rf.37ccd635da52fad5f7a021ff8212ccbc.jpg",
+      "manual_anchors": [
+        [
+          34,
+          215
+        ],
+        [
+          605,
+          214
+        ],
+        [
+          606,
+          429
+        ],
+        [
+          32,
+          429
+        ]
+      ],
+      "truth_objects": 8,
+      "grid_error": "Insufficient visible holes to verify calibration"
+    },
+    {
+      "image": "ohm_img_240_jpg.rf.ac4999edfc2353c57389e26e972be8ed.jpg",
+      "manual_anchors": [
+        [
+          34,
+          212
+        ],
+        [
+          605,
+          211
+        ],
+        [
+          606,
+          427
+        ],
+        [
+          32,
+          427
+        ]
+      ],
+      "truth_objects": 1,
+      "grid_observation": {
+        "passed": true,
+        "matched": 295,
+        "coverage": 0.9833333333333333,
+        "median_error_px": 0.3622067883866777,
+        "column_span_fraction": 1.0,
+        "boundary_holes": {
+          "first_column": 10,
+          "last_column": 7,
+          "row_a": 29,
+          "row_j": 29
+        }
+      },
+      "eligible_truth": 1,
+      "exact_pair_agreements": 0,
+      "matched_predictions_with_two_accepted_holes": 0,
+      "wrong_accepted_pairs": 0
+    },
+    {
+      "image": "ohm_img_250_jpg.rf.94715e8fcfc222d0a41cc3886c48c008.jpg",
+      "manual_anchors": [
+        [
+          34,
+          213
+        ],
+        [
+          605,
+          213
+        ],
+        [
+          606,
+          426
+        ],
+        [
+          32,
+          427
+        ]
+      ],
+      "truth_objects": 4,
+      "grid_observation": {
+        "passed": true,
+        "matched": 281,
+        "coverage": 0.9366666666666666,
+        "median_error_px": 0.39679467238635346,
+        "column_span_fraction": 1.0,
+        "boundary_holes": {
+          "first_column": 9,
+          "last_column": 10,
+          "row_a": 28,
+          "row_j": 30
+        }
+      },
+      "eligible_truth": 3,
+      "exact_pair_agreements": 2,
+      "matched_predictions_with_two_accepted_holes": 3,
+      "wrong_accepted_pairs": 1
+    },
+    {
+      "image": "ohm_img_260_jpg.rf.b1ad88683bd1f1cf1abade1e2de3f0d1.jpg",
+      "manual_anchors": [
+        [
+          34,
+          213
+        ],
+        [
+          605,
+          213
+        ],
+        [
+          606,
+          426
+        ],
+        [
+          32,
+          427
+        ]
+      ],
+      "truth_objects": 6,
+      "grid_observation": {
+        "passed": true,
+        "matched": 247,
+        "coverage": 0.8233333333333334,
+        "median_error_px": 0.3814869115269864,
+        "column_span_fraction": 1.0,
+        "boundary_holes": {
+          "first_column": 9,
+          "last_column": 4,
+          "row_a": 17,
+          "row_j": 16
+        }
+      },
+      "eligible_truth": 6,
+      "exact_pair_agreements": 3,
+      "matched_predictions_with_two_accepted_holes": 4,
+      "wrong_accepted_pairs": 1
+    },
+    {
+      "image": "ohm_img_270_jpg.rf.04ec2fd02e7e27118a4fd1b0e1062e74.jpg",
+      "manual_anchors": [
+        [
+          34,
+          214
+        ],
+        [
+          602,
+          211
+        ],
+        [
+          603,
+          425
+        ],
+        [
+          32,
+          426
+        ]
+      ],
+      "truth_objects": 3,
+      "grid_observation": {
+        "passed": true,
+        "matched": 280,
+        "coverage": 0.9333333333333333,
+        "median_error_px": 0.41683586639617465,
+        "column_span_fraction": 1.0,
+        "boundary_holes": {
+          "first_column": 10,
+          "last_column": 10,
+          "row_a": 30,
+          "row_j": 30
+        }
+      },
+      "eligible_truth": 2,
+      "exact_pair_agreements": 1,
+      "matched_predictions_with_two_accepted_holes": 1,
+      "wrong_accepted_pairs": 0
+    },
+    {
+      "image": "ohm_img_280_jpg.rf.7943c6921d6c8dc53a7852c3bc8e778d.jpg",
+      "manual_anchors": [
+        [
+          34,
+          213
+        ],
+        [
+          602,
+          211
+        ],
+        [
+          602,
+          425
+        ],
+        [
+          32,
+          425
+        ]
+      ],
+      "truth_objects": 3,
+      "grid_observation": {
+        "passed": true,
+        "matched": 276,
+        "coverage": 0.92,
+        "median_error_px": 0.415175487995823,
+        "column_span_fraction": 1.0,
+        "boundary_holes": {
+          "first_column": 10,
+          "last_column": 10,
+          "row_a": 29,
+          "row_j": 29
+        }
+      },
+      "eligible_truth": 2,
+      "exact_pair_agreements": 1,
+      "matched_predictions_with_two_accepted_holes": 2,
+      "wrong_accepted_pairs": 1
+    },
+    {
+      "image": "ohm_img_330_jpg.rf.493acc3b3760747831e37a2016d58851.jpg",
+      "manual_anchors": [
+        [
+          34,
+          208
+        ],
+        [
+          606,
+          210
+        ],
+        [
+          605,
+          426
+        ],
+        [
+          30,
+          426
+        ]
+      ],
+      "truth_objects": 4,
+      "grid_observation": {
+        "passed": true,
+        "matched": 258,
+        "coverage": 0.86,
+        "median_error_px": 0.18915330547639764,
+        "column_span_fraction": 1.0,
+        "boundary_holes": {
+          "first_column": 10,
+          "last_column": 10,
+          "row_a": 29,
+          "row_j": 29
+        }
+      },
+      "eligible_truth": 3,
+      "exact_pair_agreements": 2,
+      "matched_predictions_with_two_accepted_holes": 2,
+      "wrong_accepted_pairs": 0
+    },
+    {
+      "image": "ohm_img_530_jpg.rf.01db631cf044cad9eab338ac79f70783.jpg",
+      "manual_anchors": [
+        [
+          34,
+          211
+        ],
+        [
+          605,
+          211
+        ],
+        [
+          606,
+          426
+        ],
+        [
+          32,
+          427
+        ]
+      ],
+      "truth_objects": 4,
+      "grid_observation": {
+        "passed": true,
+        "matched": 265,
+        "coverage": 0.8833333333333333,
+        "median_error_px": 0.24631127181744816,
+        "column_span_fraction": 1.0,
+        "boundary_holes": {
+          "first_column": 9,
+          "last_column": 10,
+          "row_a": 30,
+          "row_j": 17
+        }
+      },
+      "eligible_truth": 4,
+      "exact_pair_agreements": 3,
+      "matched_predictions_with_two_accepted_holes": 3,
+      "wrong_accepted_pairs": 0
+    }
+  ],
+  "limits": [
+    "Endpoint errors are conditional on one-to-one IoU-matched detections; misses reported separately.",
+    "Nine hole-audit photos selected by capture number before final model evaluation; correlated board scenes.",
+    "Hole proxy maps provided keypoint labels onto a visually anchored grid; excludes rail/out-of-grid/ambiguous GT.",
+    "This is not independent exact-hole ground truth, live accuracy, or proof of electrical contact.",
+    "Base thresholds fixed before test evaluation. Refiner architecture was added after inspecting base-model test errors; treat refined results as a development audit."
+  ]
+}

@@ -1,0 +1,11 @@
+# Versions used by the tested local Python 3.13 environment.
+fastapi==0.143.3
+uvicorn==0.54.0
+sse-starlette==3.5.0
+pydantic==2.14.1
+numpy==2.5.4
+opencv-python==5.0.0.93
+torch==2.14.1
+networkx==3.7
+pillow==13.0.0
+ultralytics==8.4.181

@@ -1,0 +1,357 @@
+{
+  "image": "/Users/danielxiao/Desktop/sherlock-ohms/evaluation/hole_precision_20261017/dataset/images/test/ohm_img_244_jpg.rf.6cb95ebccc659c00f39f9a4a1d14f7f4.jpg",
+  "weights": "/Users/danielxiao/Desktop/sherlock-ohms/evaluation/hole_precision_20261017/runs/nano_endpoints/weights/best.pt",
+  "device": "mps",
+  "visually_audited_wire_holes": [
+    "d3",
+    "d24"
+  ],
+  "anchors": {
+    "a1": [
+      32,
+      427
+    ],
+    "a30": [
+      606,
+      426
+    ],
+    "j30": [
+      605,
+      212
+    ],
+    "j1": [
+      34,
+      213
+    ]
+  },
+  "refiner": "evaluation/hole_precision_20261017/refiner/best.pt",
+  "note": "One still photo, no ArUco tracking test. Candidate outcomes only; never replayed to imply temporal confirmation.",
+  "scenarios": {
+    "matching": {
+      "status": "UNCERTAIN",
+      "candidate_status": "CORRECT",
+      "light_color": "AMBER",
+      "passed": false,
+      "stable_frames": 1,
+      "required_stable_frames": 3,
+      "message": "Waiting for consistent consecutive frames.",
+      "detections": [
+        {
+          "id": "det_0",
+          "type": "wire",
+          "conf": 0.7188398241996765,
+          "bbox": [
+            68.75935363769531,
+            353.59326171875,
+            488.49871826171875,
+            381.14886474609375
+          ],
+          "keypoints": [
+            {
+              "x": 72.91090994519439,
+              "y": 369.9192911652239,
+              "conf": 0.9696487784385681,
+              "coarse_x": 67.36189270019531,
+              "coarse_y": 370.38079833984375,
+              "coarse_conf": 0.9983332753181458,
+              "refinement_peak_mass": 0.9696487784385681,
+              "refinement_shift_px": 5.568175756701897
+            },
+            {
+              "x": 483.7886047363281,
+              "y": 363.49090576171875,
+              "conf": 0.59,
+              "coarse_x": 483.7886047363281,
+              "coarse_y": 363.49090576171875,
+              "coarse_conf": 0.9974765181541443,
+              "refinement_peak_mass": 0.4452507793903351,
+              "refinement_shift_px": 16.878882528828022
+            }
+          ]
+        }
+      ],
+      "parts": [
+        {
+          "id": "det_0",
+          "type": "wire",
+          "pins": {
+            "0": "d3",
+            "1": "d24"
+          },
+          "endpoints": [
+            {
+              "hole": "d3",
+              "nearest_hole": "d3",
+              "distance_px": 1.181052092857658,
+              "pitch_px": 19.359689446574034,
+              "reason": null
+            },
+            {
+              "hole": "d24",
+              "nearest_hole": "d24",
+              "distance_px": 4.678743664975996,
+              "pitch_px": 19.429691808598083,
+              "reason": null
+            }
+          ],
+          "bbox": [
+            68.75935363769531,
+            353.59326171875,
+            488.49871826171875,
+            381.14886474609375
+          ],
+          "conf": 0.7188398241996765
+        }
+      ],
+      "findings": [],
+      "scope": "visible_wire_resistor_topology"
+    },
+    "equivalent_holes": {
+      "status": "UNCERTAIN",
+      "candidate_status": "CORRECT",
+      "light_color": "AMBER",
+      "passed": false,
+      "stable_frames": 1,
+      "required_stable_frames": 3,
+      "message": "Waiting for consistent consecutive frames.",
+      "detections": [
+        {
+          "id": "det_0",
+          "type": "wire",
+          "conf": 0.7188398241996765,
+          "bbox": [
+            68.75935363769531,
+            353.59326171875,
+            488.49871826171875,
+            381.14886474609375
+          ],
+          "keypoints": [
+            {
+              "x": 72.91090994519439,
+              "y": 369.9192911652239,
+              "conf": 0.9696487784385681,
+              "coarse_x": 67.36189270019531,
+              "coarse_y": 370.38079833984375,
+              "coarse_conf": 0.9983332753181458,
+              "refinement_peak_mass": 0.9696487784385681,
+              "refinement_shift_px": 5.568175756701897
+            },
+            {
+              "x": 483.7886047363281,
+              "y": 363.49090576171875,
+              "conf": 0.59,
+              "coarse_x": 483.7886047363281,
+              "coarse_y": 363.49090576171875,
+              "coarse_conf": 0.9974765181541443,
+              "refinement_peak_mass": 0.4452507793903351,
+              "refinement_shift_px": 16.878882528828022
+            }
+          ]
+        }
+      ],
+      "parts": [
+        {
+          "id": "det_0",
+          "type": "wire",
+          "pins": {
+            "0": "d3",
+            "1": "d24"
+          },
+          "endpoints": [
+            {
+              "hole": "d3",
+              "nearest_hole": "d3",
+              "distance_px": 1.181052092857658,
+              "pitch_px": 19.359689446574034,
+              "reason": null
+            },
+            {
+              "hole": "d24",
+              "nearest_hole": "d24",
+              "distance_px": 4.678743664975996,
+              "pitch_px": 19.429691808598083,
+              "reason": null
+            }
+          ],
+          "bbox": [
+            68.75935363769531,
+            353.59326171875,
+            488.49871826171875,
+            381.14886474609375
+          ],
+          "conf": 0.7188398241996765
+        }
+      ],
+      "findings": [],
+      "scope": "visible_wire_resistor_topology"
+    },
+    "adjacent_column_mistake": {
+      "status": "UNCERTAIN",
+      "candidate_status": "INCORRECT",
+      "light_color": "AMBER",
+      "passed": false,
+      "stable_frames": 1,
+      "required_stable_frames": 3,
+      "message": "Waiting for consistent consecutive frames.",
+      "detections": [
+        {
+          "id": "det_0",
+          "type": "wire",
+          "conf": 0.7188398241996765,
+          "bbox": [
+            68.75935363769531,
+            353.59326171875,
+            488.49871826171875,
+            381.14886474609375
+          ],
+          "keypoints": [
+            {
+              "x": 72.91090994519439,
+              "y": 369.9192911652239,
+              "conf": 0.9696487784385681,
+              "coarse_x": 67.36189270019531,
+              "coarse_y": 370.38079833984375,
+              "coarse_conf": 0.9983332753181458,
+              "refinement_peak_mass": 0.9696487784385681,
+              "refinement_shift_px": 5.568175756701897
+            },
+            {
+              "x": 483.7886047363281,
+              "y": 363.49090576171875,
+              "conf": 0.59,
+              "coarse_x": 483.7886047363281,
+              "coarse_y": 363.49090576171875,
+              "coarse_conf": 0.9974765181541443,
+              "refinement_peak_mass": 0.4452507793903351,
+              "refinement_shift_px": 16.878882528828022
+            }
+          ]
+        }
+      ],
+      "parts": [
+        {
+          "id": "det_0",
+          "type": "wire",
+          "pins": {
+            "0": "d3",
+            "1": "d24"
+          },
+          "endpoints": [
+            {
+              "hole": "d3",
+              "nearest_hole": "d3",
+              "distance_px": 1.181052092857658,
+              "pitch_px": 19.359689446574034,
+              "reason": null
+            },
+            {
+              "hole": "d24",
+              "nearest_hole": "d24",
+              "distance_px": 4.678743664975996,
+              "pitch_px": 19.429691808598083,
+              "reason": null
+            }
+          ],
+          "bbox": [
+            68.75935363769531,
+            353.59326171875,
+            488.49871826171875,
+            381.14886474609375
+          ],
+          "conf": 0.7188398241996765
+        }
+      ],
+      "findings": [
+        {
+          "code": "CONNECTIVITY_MISMATCH",
+          "message": "Observed connectivity does not match the reference."
+        }
+      ],
+      "scope": "visible_wire_resistor_topology"
+    },
+    "wrong_board_half": {
+      "status": "UNCERTAIN",
+      "candidate_status": "INCORRECT",
+      "light_color": "AMBER",
+      "passed": false,
+      "stable_frames": 1,
+      "required_stable_frames": 3,
+      "message": "Waiting for consistent consecutive frames.",
+      "detections": [
+        {
+          "id": "det_0",
+          "type": "wire",
+          "conf": 0.7188398241996765,
+          "bbox": [
+            68.75935363769531,
+            353.59326171875,
+            488.49871826171875,
+            381.14886474609375
+          ],
+          "keypoints": [
+            {
+              "x": 72.91090994519439,
+              "y": 369.9192911652239,
+              "conf": 0.9696487784385681,
+              "coarse_x": 67.36189270019531,
+              "coarse_y": 370.38079833984375,
+              "coarse_conf": 0.9983332753181458,
+              "refinement_peak_mass": 0.9696487784385681,
+              "refinement_shift_px": 5.568175756701897
+            },
+            {
+              "x": 483.7886047363281,
+              "y": 363.49090576171875,
+              "conf": 0.59,
+              "coarse_x": 483.7886047363281,
+              "coarse_y": 363.49090576171875,
+              "coarse_conf": 0.9974765181541443,
+              "refinement_peak_mass": 0.4452507793903351,
+              "refinement_shift_px": 16.878882528828022
+            }
+          ]
+        }
+      ],
+      "parts": [
+        {
+          "id": "det_0",
+          "type": "wire",
+          "pins": {
+            "0": "d3",
+            "1": "d24"
+          },
+          "endpoints": [
+            {
+              "hole": "d3",
+              "nearest_hole": "d3",
+              "distance_px": 1.181052092857658,
+              "pitch_px": 19.359689446574034,
+              "reason": null
+            },
+            {
+              "hole": "d24",
+              "nearest_hole": "d24",
+              "distance_px": 4.678743664975996,
+              "pitch_px": 19.429691808598083,
+              "reason": null
+            }
+          ],
+          "bbox": [
+            68.75935363769531,
+            353.59326171875,
+            488.49871826171875,
+            381.14886474609375
+          ],
+          "conf": 0.7188398241996765
+        }
+      ],
+      "findings": [
+        {
+          "code": "CONNECTIVITY_MISMATCH",
+          "message": "Observed connectivity does not match the reference."
+        }
+      ],
+      "scope": "visible_wire_resistor_topology"
+    }
+  }
+}

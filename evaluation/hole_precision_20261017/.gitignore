@@ -1,0 +1,4 @@
+# Reproduce these from the documented dataset sources; do not commit bulk data.
+dataset/
+runs/
+*.log

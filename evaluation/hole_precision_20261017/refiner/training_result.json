@@ -1,0 +1,7 @@
+{
+  "parameters": 118705,
+  "seconds": 187.90348386764526,
+  "best_val_mean_px": 2.1883139701729473,
+  "epochs": 40,
+  "note": "Validation uses fixed GT-jittered crops, not end-to-end predicted crops."
+}

@@ -1,0 +1,13 @@
+path: /Users/danielxiao/Desktop/sherlock-ohms/evaluation/hole_precision_20261017/dataset
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: wire
+  1: resistor
+kpt_shape:
+- 2
+- 3
+flip_idx:
+- 0
+- 1

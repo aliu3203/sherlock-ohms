@@ -1,0 +1,1908 @@
+{
+  "source_url": "https://universe.roboflow.com/circuit-detection/circuit-end-point-detection/dataset/14",
+  "license": "CC BY 4.0",
+  "stats": {
+    "train": {
+      "images": 245,
+      "wire": 482,
+      "resistor": 478
+    },
+    "val": {
+      "images": 41,
+      "wire": 17,
+      "resistor": 23
+    },
+    "test": {
+      "images": 20,
+      "wire": 49,
+      "resistor": 70
+    }
+  },
+  "near_duplicate_pairs_grouped": 1,
+  "groups": [
+    [
+      "20241005",
+      41
+    ],
+    [
+      "IMG_59",
+      13
+    ],
+    [
+      "IMG_63",
+      40
+    ],
+    [
+      "IMG_64",
+      15
+    ],
+    [
+      "KakaoTalk",
+      80
+    ],
+    [
+      "scanned",
+      60
+    ],
+    [
+      "transformed",
+      30
+    ],
+    [
+      "IMG_60",
+      7
+    ],
+    [
+      "frames",
+      20
+    ]
+  ],
+  "mapping": {
+    "wire": 0,
+    "register": 1
+  },
+  "notes": [
+    "register visually verified as physical resistor in sample overlays",
+    "Two insertion keypoints retained; missing visibility remains 0",
+    "Capacitor and inductor excluded; no LED training",
+    "Session/filename grouping and perceptual hash reduce leakage but cannot prove circuit-disjointness"
+  ],
+  "manifest": [
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/test/images/20241005_112544_jpg.rf.bcf11a4c97e3e8f09a4e6bdeb548722e.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "f04c9240745665d02dbe88c797e31b2cb808653fd279bcc6e75527ea4c273d87"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/test/images/20241005_114152_jpg.rf.6e5312ac1e0d407f31335bb8b0220db5.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "6cad732c2183d39ca1d7f91f463581c84962a5e9c7619c46d88cf8a7b70ce0dd"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_111914_jpg.rf.e3836da4a5f6e4ac9952ac34a05e9c7c.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "78abdd41bca31158ba06e6fd579af9f7a8e78fbe6e2a3cabb5fa33894f2773f4"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_111928_jpg.rf.64319d5ac626a251a69238362af8b13e.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "132bda5f4075ba9dd0911c125de7fc475d63ef198b63ab5f032abaa9c2891eb3"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_111944_jpg.rf.01fb39bb5a38b192a6a7a07b191b1582.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "badc5ed4869afcae8ca5e031861d5cf31db017a61cb9568a708198d4d98895e7"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_112001_jpg.rf.fe981eb41f59bcb40b8fa5638d1c3e87.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "6773524f50b1da7120776303ed9023a51a244357cd3a21506b463f27e42db102"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_112110_jpg.rf.981503d581e9c19124c3ab0d875082ab.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "2f95c852f54515b44cc745f2efbda81245dcfa20433e10190669d3ad4bdc75f0"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_112257_jpg.rf.2e78103e78453175576dcab4cc7ba984.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "8b33d4d487316a9713c2a2cca3988f96d044c9a0274e1f26b3adacf10ab5a2f4"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_112345_jpg.rf.650d124200f5920059dcba474e92449e.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "14e1765cea961ebb656f26e8450795a1b83cb319381a0882e5eed8b67cf5909b"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_112532_jpg.rf.9fc346fa7bbfafa9858f1cb340f13d5d.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "ddcb86bac5073a04a1b4901150549cea7329af030eaa658a001f3f02230d8381"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_112646_jpg.rf.29e3d24458bb95a9b38bb65127b6aa1e.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "1744519652d4a733d5156450ba71d3088d6964380eba2830f4a496f937d18e77"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_112657_jpg.rf.226e35fc0e909779f3408d1b106cf1f0.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "f11ff765a3ced4e94c02b515ebfcd45e9a816b638f7eeae5d14474c0df99ca09"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_112740_jpg.rf.b4c6f811470bc1f75e7d1bdcb3dca326.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "a4208f709c691ecc4da1eb35d2be1a9334b806b8a9a6b5cc24a549414580d7c3"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_112805_jpg.rf.dd58ae68358fd01a598c54de0a1a05f0.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "b63e5d003b3f55d4cfd43bc3c2686827439f73c528b59d5ab576c8989dcf0c40"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_112810_jpg.rf.a6ac225fa69ea90910385fa4ed7a5bd5.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "710ad84b2f438b403efdaadcb378e28a7e8b7b0d47b1fe5fa1ee0b5e9b3ed999"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_112910_jpg.rf.c07bd1854d4e1e6f773a6b27752ba162.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "5003f4724e759cee0deee96ff871c8a5f20c4fd008bc5954422aea443cf7e668"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_112934_jpg.rf.830816f1f0d563a21a5e35062a6b0e3c.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "630296cc88b8b10da5686015ca0ca847478c2b94da9c403187e9cff3740b739a"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_112938_jpg.rf.b1f8bacaee160b39e562c4168feb2b84.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "df307971059e5b0da0824d144eb97f4dbf272aaebef2f43bd5cba2dea1b8d900"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_113328_jpg.rf.5113ef755d28d98d5fb64b8a253f80d1.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "4162f166ca02a1bbfb8a5ddecc36e2e1ae5dca8b869e36e8c0e046ca44f6bdc1"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_113337_jpg.rf.8a042413dbee4cf4aed14f4a8ae41f74.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "3deb8a5b4f71ecdc6fcfa3aa9432e82267116677af7b88ed25a572151b4744cb"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_113413_jpg.rf.8bb7cf4adb6cb479d863a8256947c406.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "e1d49e21352f05e07950c0ac3f48c4539835409b993af17960863f663ddccc94"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_113507_jpg.rf.690ebccd4433323d521c68ef58db2caf.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "ebf6bb852a38d2bc5b7e1bec91df354448a671fad28d8fb5658add60e663c5c6"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_113522_jpg.rf.532e550bd2bb68effc91c7a4ef08a717.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "d6c6ee579c352d39b114aba60ca69089286d52ea0e6fe2c13035a01104387730"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_113551_jpg.rf.428e1669b0d0a7886512fd597352e4b0.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "5afec899a1c0f9b09c203bbac8697965cf44fe671e8a298784af06e51423cd45"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_113557_jpg.rf.0f2e8a417f8e825828ea8c99818df127.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "085a7a39f072252e6261dcd5312fea92ca3dccd8f8c159ac592fdf8b985417a8"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_113652_jpg.rf.bd2cddd136916f789c6f27601f693649.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "47c962655d2e3799c4d7429be3064b82cdae977f11f92078f08a2b2e8869f195"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_113746_jpg.rf.f737d78059627e44ad6992cc81db53fc.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "e7eda424a5398efc230ee5548ab41e064bec71d617b1dc487a00b95d8cf034a1"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_113844_jpg.rf.e938000591b1ca451818c141de152815.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "02923502ab1577c7a6c62d30a73c14ae4667545d454dbf4da2521a4277ac64d2"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_113853_jpg.rf.07581d196e55c5bbc17983ea600ccede.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "0e887163b49302cbbb9fc64a070feb4c852261a67ae8ed64a2b9f7b4eb4f9b99"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_114023_jpg.rf.59f9ab88995a9b344df16820b25bd5b8.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "7b41828f31d799cd51179657c3e3a5ab554e80f769d7c4cb0857affa528d5446"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_114035_jpg.rf.a12631aa764f7661005f663d545499b1.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "b02f0839d948fc75d12d85e16a6986bc043ac7488d0bc5c5905f512682624dc7"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_114130_jpg.rf.d487c3f7c5bf0fd799d7c1599d5ea06c.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "08c7feb9baf24859677802f73dd2c033ec5f9d323b8cb8ff9c7f6d3406647a1c"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/20241005_114211_jpg.rf.74ba9d9ab7229f9c26cbaa6c51c84c43.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "313b591463f7177af68c6c8ecc4740adc9a9f1efedf5656bed251f1eed639a20"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/20241005_111827_jpg.rf.3e357e2c7f28c9e9071b0a0a5caf211b.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "49baef81965e1be7a6b76391a7b31bfb5b958637671a75bdc2e4d2d4284d7ad2"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/20241005_111859_jpg.rf.40a99e704567ff892752a23e7bcd10f1.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "64156d4299c67cd6adac43f38f07fd6fb68f38cbc73ddd8a63fb10ee6300eb5b"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/20241005_112016_jpg.rf.9e40e9e9ec9f935f50ed1b338f80953c.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "2ef4f9e4884e3f54a2aafbba8f575ddc8b03c9066555085680efb863229cb860"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/20241005_112224_jpg.rf.2b0632737f54b717f2398230f70979d2.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "0e5b39bc6a8c861a32026b846b711dbc9b2b0358f10fee7fc6ac9b29ac9e2c46"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/20241005_112505_jpg.rf.e040a4f1eec1730bb0d1c297f91247b1.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "ecda25e3f068bf2094c06710224da44147e6a300952b5ea3bc378f43d599f634"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/20241005_112614_jpg.rf.fb82ce6adc59064197c15bb61c7af681.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "ea3c0cb3a1edff36bcb508dcdbae489941ee078c28c98c0f91f2d4633eb5c8a6"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/20241005_113359_jpg.rf.882f78cc7460ef26dabf8e46b9aa3ba5.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "640920732eb1e7a342c4c85028a326a24512314686d919e509d4e1effa695bc1"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/20241005_113946_jpg.rf.28555646d299f7259b5e043d26099ef9.jpg",
+      "split": "val",
+      "group": "20241005",
+      "sha256": "2227678b2877e3a648637abfb0fd9a63021a5235ab94b2bb66f024ee66bfa95c"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/test/images/IMG_5979-MOV_20240605_190604-605_jpg.rf.5471ed02dd545008fa8229a0bf2cc4dc.jpg",
+      "split": "train",
+      "group": "IMG_59",
+      "sha256": "2e38b642eb996854c43612dba532e246d2d86c263c8bb84b2c7a9bbd4b3b2a35"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_5977-MOV_20240605_190525-245_jpg.rf.71a4f0c987f8de53e3dc21c945083560.jpg",
+      "split": "train",
+      "group": "IMG_59",
+      "sha256": "d234bd24952061e91f3698c40ae077bb459bd72ef6c7f9e83a9189b5935cfd35"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_5982-MOV_20240605_190704-213_jpg.rf.35efac6d6701bf2e623d89fc10028930.jpg",
+      "split": "train",
+      "group": "IMG_59",
+      "sha256": "37d5ec088222114c693e217b8253847af9e97b66424538b7d4d2648aad9cb71a"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_5983-MOV_20240605_190712-149_jpg.rf.eecc9da5338395d2339e26624d3624d5.jpg",
+      "split": "train",
+      "group": "IMG_59",
+      "sha256": "37be8045ed51b4926cab78eac1ead6b301cc102654a0cf17f113ccbc111b6a0c"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_5990-MOV_20240605_190818-733_jpg.rf.7b36ba311c7b28f0fdb14d627f30b2d3.jpg",
+      "split": "train",
+      "group": "IMG_59",
+      "sha256": "61397e344492ee11b28b141048e34eee90babf27ff3397109cef2737fe5468ed"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_5991-MOV_20240605_190829-885_jpg.rf.137c11beebc6e14be3566d64b411247d.jpg",
+      "split": "train",
+      "group": "IMG_59",
+      "sha256": "6382de2fd195868d39f593db8488bdd0271dc1b1bde3cc6e51c8f754fb6b9f58"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_5993-MOV_20240605_190910-989_jpg.rf.8f2c0c395ee3f1e22d76f71c138e915d.jpg",
+      "split": "train",
+      "group": "IMG_59",
+      "sha256": "218548b31de8c0084332a34420ea6a9c5fcd161b0704c55f81ad634320b52927"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_5994-MOV_20240605_190925-612_jpg.rf.287466e457b57b3bf4b75035d3ca8099.jpg",
+      "split": "train",
+      "group": "IMG_59",
+      "sha256": "f5013cab9abe89a1b8277155a1baea6c99cf1aa16f775158ee19cc86f842317c"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_5995-MOV_20240605_190937-725_jpg.rf.ccac39d4d9e56f6820cc585bbb843be5.jpg",
+      "split": "train",
+      "group": "IMG_59",
+      "sha256": "fc812840559ff29d0c6794382d96fad62975d99a2fae632c2dd82336ef70c5ae"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_5997-MOV_20240605_191002-453_jpg.rf.c80e2dd0de409b453a4f0ee8a15046c4.jpg",
+      "split": "train",
+      "group": "IMG_59",
+      "sha256": "03e85add9bd66c8abc5c3cc1483d7b6b506d0201a7a4bb1109cd0452b27e8fa9"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_5999-MOV_20240605_191022-754_jpg.rf.a8b053e2e514b61be93afac76e634773.jpg",
+      "split": "train",
+      "group": "IMG_59",
+      "sha256": "1ed1c095ced00ad0f0c34cf02f91b9386615b676da6f443baf413fa4ff96aedc"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/IMG_5981-MOV_20240605_190643-845_jpg.rf.1960e4cd595261a4a967749b5b1db779.jpg",
+      "split": "train",
+      "group": "IMG_59",
+      "sha256": "3039211b268ce663e42e44865dbe048cb27e0f7a86b10679e6115ce07a82ff4f"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/IMG_5985-MOV_20240605_190738-157_jpg.rf.ca771baebadcd389f8009d474efe1037.jpg",
+      "split": "train",
+      "group": "IMG_59",
+      "sha256": "5b67f7351bb90331b51e45f21dbc0c67312f91e168ba06be6045082865ca9312"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/test/images/IMG_6376_JPG.rf.9f45673f771643e9b4dcd790189f2528.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "1b7eec8ebd8867b2076b91d4614ef602b1c6c190400e02dbc7ee1660d6101e68"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6315_JPG.rf.94382b30e633e8274e0c0fe562e8a87f.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "f4e363af0f368964971fff3a88a6e14486b0bc156ead14e39a88221a54063db4"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6317_JPG.rf.4f6a7083e3e1184862f3eabdcb4febf3.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "fe0c38aecce59ce80f8a131cbe9986f4b1304851c745f9892b53b7a8241def94"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6319_JPG.rf.6c8ccc4da13e09756e61e8ca5e9d4a8a.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "86f89ee3159332ceaba2544c3a8e0b850851ff3a4fb9b347a0c18eedff928ea6"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6321_JPG.rf.db9c40a68236bf68036005c0e24b89e7.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "37e2d48edf26260af250e9d72c11dfdcd5597998dbae773282a7ca64e8a77a50"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6323_JPG.rf.fa7c28aa5d7b576574bb470bccc1352a.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "65e69528547f7db7954e1ce452cf04effd307bca898c3f497242aa44802f0a91"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6325_JPG.rf.a7bcac7f5979ece37111c982389177af.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "ee630eb288027bda4e327fde9f9f914d752021e0caccbf7c35b82ac3073def4f"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6327_JPG.rf.fcbcd53262a3a65b2cb99a3c4678ec21.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "15603150adfe3302eaac6e87f8cad98252178e68760580b613593d06197da794"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6328_JPG.rf.af9baed5f17cc59f59129e154f4be89f.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "513d8dc26f4c6f24872a0854c249eef0b11b745978c638664319bb4dc8a34521"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6329_JPG.rf.3731747cc473a1ff23af3350330116a4.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "562a463788e3e1ec54003098817c13504d20ffa477cb1af511673f21acc5d6f9"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6331_JPG.rf.c5ef535455486ea8d3c95f67e1ac4ebe.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "331f3580156dddd553ead2f8b1ca7c32b8700fd0f527a3bb0f38ee70dee64819"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6333_JPG.rf.620e29b4fab1d4c24075f9c8cd032acd.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "a2e0ad0a5051460c5292d2a27d302921c9c08689e9dbec252eb5ffd34b87e653"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6335_JPG.rf.cef17de3c8ed3a7bc62b36305daa23b8.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "9a653a711969f724dc232cca9c60598ec5ff600a3122b119ab969da50ecb92fb"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6337_JPG.rf.db548d5ca59e826960116a1c7a292ddc.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "3ff49181c1a82e7b484dfc0bae5799d7f298a07893d10618cb8341eac9eafc6c"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6338_JPG.rf.2fa5df0c6291819556ca8f6162cee35f.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "fce4f4162fb9b7b7a9bec5ebd5fbdecd711a991f7f4f53613dde2f379dba3cbc"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6339_JPG.rf.7d45196962ebc415e0c277410a9324e6.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "331ba8dd91311e3dcefca144103107b6426ca8cebe2c1d9b7c8bf68b2fc3c28c"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6342_JPG.rf.3f68d9323c33c5fc3a473e1725acba9c.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "f84d53a321bffb1f5f4c54a4fa7d0e1d3082c3f90d1ce33f3b15b2cd47ad402d"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6345_JPG.rf.4d498f809f8ad5616b93e99622ec65ae.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "9df1237b0fab549cd2b14d75932bff3f30278b08e8f9f6aa785481834deb8091"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6346_JPG.rf.89ea6bd4c45bf2a4147eddb86976a878.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "6031bcb9496955b995f9d695f3ccaa0f76ac922dfc159e2cd20171a7d7107432"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6357_JPG.rf.d2bb0120f76f4acb858e6a35a8f1e644.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "91cc6cf31b585c991ee8a8ba78ae0b9607a9c6249661645e19ab33c6ddb0ed8b"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6359_JPG.rf.4a26852a322d0aa3ed6a6dd332d42c29.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "26e8a8bd0e130b5a23fa45a7842cdfd2b148d55786f0453b8d05be476c0c02c8"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6360_JPG.rf.14ca18ba334d4b276e50ba6884edc20a.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "9e7a48bb8382df702d5190ee9151419e83cdb60391164283035a95578a026915"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6361_JPG.rf.ce26ea1993f1663e8cff2a63a4427600.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "c8c71fd5ef3fa24cc21c0e7d7f32fda330da767bc0494af7e9752f2555b1b754"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6363_JPG.rf.cee9f3e57bf96ec0a0b54685d6fe3208.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "8a0a8a651787eccfb681c69cf9534ee5f629148bff2138cd376017627b80d585"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6365_JPG.rf.f1dbbdc2e3dbd783b8e419e29c5e2530.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "4bf5086b448eed02ccdb192ffa56f08975a857fc90166044fcf1a9735056a840"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6367_JPG.rf.28427a117b8d37dd34f5a62eae204cac.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "c27f56b3513158c425453e51ac73b63b9f5fab632de31529da61dc6308418370"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6368_JPG.rf.7b1d3196c492c5e262eef635d4550471.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "7610d2e24250fd077b8085c64c4cd9b0055777287f481910d911671f0692e67b"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6369_JPG.rf.6e3507af8e66f36e07c30f67c60c0f12.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "0ec3d4e0508f6f9fe5bac7b631e3ebb3788c68daf63a0cce0cdb50944aa75fb8"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6373_JPG.rf.9f1d14f63cf23f75816d92746f99b374.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "d176ad351714daa4db0136799eb504c9af498ea1b5bade0eef221256d03c942d"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6380_JPG.rf.4e20bc06f884899ab91b7b6535784f77.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "fa514875c5b1bb21764feb92d5b62da78519181b51e575c623431ad8a323fa89"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6385_JPG.rf.efe35505ec2bec6e37aec5cdcf3cc06b.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "5f554facea8084aad4f5f6b17e89dd516c261903068f6c9ad71742b426d7db02"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6386_JPG.rf.31938255a42b6fb4e08bdc32fc72972b.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "3347c76f8183de346c8e1b68ddeaa44d8c74f9cf374c988ba2e1c1af617172f8"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6387_JPG.rf.8b1ea9af7e6026d561e008d71b789b10.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "ecf3976aec4b4d3dd56fd8d22c1a8086485fa7d972fb76b4e5b4d0fc1b3f5ba6"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6389_JPG.rf.e350463db49794f4363254105ef191b0.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "5ca943d41bc4eedfefc5b987ec79b2e5df33cf5219483536d3349a418305ca78"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6390_JPG.rf.37e948307d55b445193d76be96a89e5e.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "61a564cbb30aafa8526d43539db33662fdfdb7bbbf01b5830a17b0dac98f81c4"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/IMG_6334_JPG.rf.bb122fc479c1941fd5de14d5be3b5da6.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "64183d98f57fb9077f1adcb58ffaaf2d95df93fae82bfa7a370afd39729f8b40"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/IMG_6344_JPG.rf.39c635d1a76df5cb2fd5dc5039c44707.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "d15bc8e1b329676aa7cbfd9a0cdbac37285ba3d9b8fdbfcb0a1eba7ab31c0668"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/IMG_6371_JPG.rf.315578df4993cb1b07f99f4656312dcc.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "d1a94b5636518ce60979a64ac4bd2b26f5e1bd933bf51c3fac9c1a85e036e48a"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/IMG_6378_JPG.rf.8a12e26fefc93dd241539ee61d2f7ed8.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "4330b10f722704c5a014c9ca0937346f86aee5e76062d933215666067302c065"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/IMG_6382_JPG.rf.ff38076c533b741115728a426c8fd137.jpg",
+      "split": "train",
+      "group": "IMG_63",
+      "sha256": "f1188f9435d4d854b1fe1d0febeecc8cebebd2959b1838e446ef498c8e1bd452"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/test/images/IMG_6415_JPG.rf.c96cfd7c63caee6dec31c705760edd32.jpg",
+      "split": "train",
+      "group": "IMG_64",
+      "sha256": "cb6af25c4202f4a212a9428e46fdb95a623cb065382d044e16433d0ecfc52647"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6416_JPG.rf.5b4c5dd6d8e590c1d7cfc1625cb57b69.jpg",
+      "split": "train",
+      "group": "IMG_64",
+      "sha256": "40b37b5025e21ce0c43ebc93599bb5e52d99b78d1398f5a8af4f1cf49c72d4b5"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6417_JPG.rf.ae3b19e0105fbe79cf6a6e1aa35a7418.jpg",
+      "split": "train",
+      "group": "IMG_64",
+      "sha256": "2f02ef26042f8a38c68e7d9e29d85b637915b825c929159759b52ba0c8bdfbb8"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6418_JPG.rf.9e4060d468f7a86dfc4db4a7267523dd.jpg",
+      "split": "train",
+      "group": "IMG_64",
+      "sha256": "f5485e79da1055dc33f0a2303ab21a25b941d02596bf42bdcc2b958cab83fdec"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6419_JPG.rf.9b14ad0d3cbc11d24d24f2649a1af10b.jpg",
+      "split": "train",
+      "group": "IMG_64",
+      "sha256": "eeb408171a7910a8af563efde05a2ee51b43c99493e39305a85d60add076beb6"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6420_JPG.rf.9f217b7ba10304c6dba02ca5bfe92afa.jpg",
+      "split": "train",
+      "group": "IMG_64",
+      "sha256": "2e505763725adb8c58f794195b71fb9d3c613698085a64f28c2dcd12fc90734a"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6422_JPG.rf.498e857a9ea510c0a064735e0a8f6421.jpg",
+      "split": "train",
+      "group": "IMG_64",
+      "sha256": "7aba4229fbabe2a03ad39f8f92c620c11037f0a0745d28a0e815da60f63cb3f8"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6424_JPG.rf.e80c3d0c506cc15b03e400ed03ae5a85.jpg",
+      "split": "train",
+      "group": "IMG_64",
+      "sha256": "d3b3585360da230f693f60e4fa3c8d9e2986a10fd097573509a5719e11f9a751"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6426_JPG.rf.4e88696a37a2cdc1c4ace720b6756169.jpg",
+      "split": "train",
+      "group": "IMG_64",
+      "sha256": "995f364bf3ca920a6d5a902519c66ed755dab14a00cd5d8099a9255e989aaf7b"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6428_JPG.rf.c35568fd7d5c6ef6f856719e666db105.jpg",
+      "split": "train",
+      "group": "IMG_64",
+      "sha256": "a6a5b97db37e8e68a9de5bdf425e86a01e86dd1d4943c1da8ab00a1397b22331"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6430_JPG.rf.3165eae09e3f20a669de1f996378ed15.jpg",
+      "split": "train",
+      "group": "IMG_64",
+      "sha256": "355a7837c579d7fb48452026f854ed8519bbf4d881f576c1996e8e05987bf6e6"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6432_JPG.rf.f156967aef7114e06241af10c6c75aeb.jpg",
+      "split": "train",
+      "group": "IMG_64",
+      "sha256": "59318a01c12755b4da5a6972796ea3aa4d3b4aee60df18d725d9a92654cdd1b5"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6434_JPG.rf.01304596e32876dbf9f702cb523824b7.jpg",
+      "split": "train",
+      "group": "IMG_64",
+      "sha256": "d15db8ea3e6c5b8f8c7df101469d4e040f5e1b9a90c63c51258d8e421960d1f3"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6436_JPG.rf.a4bb6705a4b19fec43958673fa6ddbd1.jpg",
+      "split": "train",
+      "group": "IMG_64",
+      "sha256": "bbc044d5150755bbedfd596129d27a4dde25b8beeb2fdbb44428ec251a8cd941"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6438_JPG.rf.80157e6f2a0339e4e80e4051b9e2187a.jpg",
+      "split": "train",
+      "group": "IMG_64",
+      "sha256": "acf9cc22dc845b7f9dfcb1c7d0874950963118c40122bd4a12d97b451057097f"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/test/images/KakaoTalk_20241012_234725691_04_jpg.rf.43b3a15f4fa999672cce9833b3277090.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "1f49f12e8dadd0d0803fc3e1ea1c7a69a5797740bb4d2cf9bd9ae73bdb72fda1"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/test/images/KakaoTalk_20241012_234725691_22_jpg.rf.b3bff083692b4db12dec3b5fa451c28c.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "c0e16983f2f53940d1e70b209109439c05982a447d450f70ef0c0f3396231e21"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/test/images/KakaoTalk_20241012_234830161_09_jpg.rf.b29079d5bc7dfacf94cd490dc8470f3b.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "5943cab144143cf345e08e008109a5d775e506634789f04f45becf24b3248bad"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/test/images/KakaoTalk_20241012_234830161_26_jpg.rf.5e5f82508c7306b01c3944e499f22403.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "d8dd7cfc0c927c20acc0649e787a1591e72531f17ba9c7976b6efe9efe3af68e"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20240906_205618831_01_jpg.rf.1a28a5b099e603aa95d8c451f55d7516.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "7691a641bc717483bbfebe3aac161a1f8e3d04992edcb6ff410a2cdf43de0270"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20240906_205618831_02_jpg.rf.cb23258f231fe1f267bfbf90e63bebd1.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "846021e3fa03901e418567f27d326c3912ee33e1e51a14fa2c81424ab7f6c40a"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20240906_205618831_03_jpg.rf.4b2539fe5bc2b9499f405a17c83ad983.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "eec60e838b80a367611109dfc704ebf070a3069fe6b49cb807837924acd16f35"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20240906_205618831_06_jpg.rf.294f164d2fd46e8f0a3bebab31ded24c.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "05e7651a974256563f378e558f9d23209643bd02e9c8abc3e5508a89d8663e8f"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20240906_205618831_07_jpg.rf.c6bd62e24999cccfabf21daea9bf1634.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "e9badcf67aa9cc28eeb565b77a5fb132153d14f49f2eadd6e0a5e1410b0a6862"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20240906_205618831_08_jpg.rf.9ba6d45216a5421cfd9b53378fc7ecbc.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "7ceeee079a143fcff3c56c8be81e611ae55d6eebcbbfbc86458bbbfb67cd78a1"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20240906_205618831_09_jpg.rf.f6b515918b2c202c6a11f5605658f2f9.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "6dc33a3b6f3f58eef51bf36c62eccad58ab35af2e6ee5cb3c50343c53b336b96"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20240906_205618831_11_jpg.rf.e360f3e785867cae24264867c9f762c6.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "1ca4428e5cf60a0a772afb03bb557d51b94ec173933f9e2dad3491cef6d8af2d"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20240906_205618831_12_jpg.rf.6d8e7e42d7898b0aa3d5e2540041d71c.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "5fedaa19f4fd13d994c199164b2d58e4dba5b875141ba34dbfec622b52283227"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20240906_205618831_13_jpg.rf.7d66609e306b9a3af3f5663c4d650937.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "df3fded49522f69c7ac605aa72e4076dc5181341e55e12c84c51bceb648962c7"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20240906_205618831_14_jpg.rf.f2132806ad078423fc848fdb17a61c09.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "0b329a363cfb1321273603fe7f6ba467c556e596783fe5a617848db7b2fd8e60"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20240906_205618831_15_jpg.rf.0e8b5555ab3b5a885196280c655f7d80.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "54c6cb99a92ab10f2fe87ad46c19aef9247ff9791d67a71a2581ef773399e922"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20240906_205618831_16_jpg.rf.f58f7711a69767a79995852e722af260.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "ac679f57462d4118ef54352920e06220d04d4b45add04339c02b928b2c129251"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20240906_205618831_17_jpg.rf.1b96ef1d0e5a9b8ab1765d8aaead2dcc.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "0fa98bd8c213e7554792fb4d81988ca71fd2bbfac537cc4e01fee7c05074df83"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20240906_205618831_18_jpg.rf.77a4678f0e1461309c7e40496a5a7580.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "eda023a411d7bb79fb1d6e898e8236e14b15387613a2ede762d58136632ff874"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20240906_205618831_19_jpg.rf.05c724fc27e9d05478cd31023dcecd50.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "ed68184eb31a09ef3d9077319f4f75adbc114b1f820ce328d46bb93210acd168"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20240906_205618831_jpg.rf.9926d1912929feb919314a62d96b2ec4.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "57ecf85e763676877b5177e154d04d19babf5e62485dda5fd456b0adedbdcf1c"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_01_jpg.rf.9e856f7993c31302b330db0b738c6832.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "7975ff35c32c4a5dca41f3d258a101eed5643cba0f3e2da5332711f409485365"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_02_jpg.rf.d5ff91ab9aa0c318855308a6dee2b3f1.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "41699be7b67b254a3120e18ce5c5b53de8f653f1af77573efc2ecee53a98990a"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_06_jpg.rf.8d303427c9df8f9d4f4dec748d8129d2.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "9813fb825686c556c3fdf781ca1f3ffeaabc6daab478470859014e069bfe783f"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_08_jpg.rf.0716211c726151acbfe56845c8686642.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "4948c861f3aabed1e472556a43e3a359d194abd48783d9d6b51d5db150ab74c0"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_09_jpg.rf.2ef9a86b1aea8edd538e922a00cc6a50.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "d3258fc81d6b38110c6eb15d1624d169aec5e79fc59bd2275578efea7a948869"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_10_jpg.rf.962f5e244cdf5ec8fcf0d276c7dfaaf0.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "d7874097d192b8a33ceeb4df2015a1b7bb7f6099944f30feef328a181f3f0276"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_12_jpg.rf.96cc362818ee79a6f2282d2e651b9165.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "fa25be68ff1ea7d0783fa65c1a459cd9ad00c2b152d6497955f56e9e5c5d31f4"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_13_jpg.rf.930650b6f1cf65a6358e3cf135438a10.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "3a36ea32a4f7fd9070b3cffe0b94cd4eaa951207278a4c7b039a34813413c047"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_14_jpg.rf.497bd299e43e8c2e52581f922063d0ca.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "09bf929d5c2b63aa0297a5f14c115b486e4f79b667d362254e2ee69e0a3f79fe"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_17_jpg.rf.18748530d3239dddb93e71c3418bc82a.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "610bdb8f5117c2d67a08e9eed5d3c22903093bf72454161f591ada56957e18df"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_18_jpg.rf.659df8442969c12f6d20d494a4d9184d.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "bc15bb078606b2177140e1be070bd92b65b1e0e02a2d15116a5c5d201bfe2187"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_19_jpg.rf.334781d4b0d877de52db74836e163d2d.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "49e4e27ba4ea255764615ca7888d2552f7c54b166afbef8af3217a8cba233a31"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_20_jpg.rf.1711366ab83c028dd750d19ebf984e82.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "abdf37f76279ad28eea1e66fec8c0faefa5f0c786c61ee9688b9c1e3a68e1875"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_21_jpg.rf.0de21fe4a1d381485cee85c6fe968419.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "76b85df2fb4616752134754d6debe0368250878e3d3f385c0ec0b3caab8bc541"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_23_jpg.rf.cc5d30f4fc12c8340b7de9b192d0e1f2.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "5181cccc3165c7a5df46ceb548a00e27e2821c7cf2e8e959f3991d5f7289d900"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_24_jpg.rf.a5653f808b3d5a84a45bd5c7c0302347.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "aa8c3e7c8a5dec4d54ce70b1a57d00b7e466d82a44ba3772bd5b0658b34a2533"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_25_jpg.rf.35379b162da1f7b6bcb8a963d40eedd4.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "864ac66a7a299262d8657af7619b46796d8f8bd6341facc50aac0fb18ec395e4"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_26_jpg.rf.0e176dc023155ca8a1a0b565ac51ceed.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "382188085d9615cf549696315c941eda9b81622172932e95a017078f8b4cfe73"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_27_jpg.rf.6857c159a747ae5fba2b9cb1ccefc0e6.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "e8eef39e3958c43622453acc2b244cf3fe1399dda7acbf3d9a4b781558e6176f"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_28_jpg.rf.4f632eb750c9085f5f5018c6dc3102f8.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "4717d483fad305987199127bcbcec920fe0a0407f53dbbc2e3d8bba37e6ad465"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_29_jpg.rf.d4013ddf018c69a5c580cb2b2d21bd5c.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "e9fb82b7b93146488b6b0373b7f14d31fbeef91551f72c3614eafd8e2aa0da5f"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234725691_jpg.rf.d1823ad3dd74c801613e92b7f65eb0b9.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "a41c75b3366c036572a0c080285ed9ecf3c2c09272efb3c1a4aaadbdf6a4576a"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_01_jpg.rf.753d611a89a6b9b89b05f98e684beded.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "fb4f81764cbb4bcec406048a0761bea2e9d897e917854342fcb4ac26c3b6f051"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_02_jpg.rf.3c65f1af1300ddc7b7443bde5592a379.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "1aa1a03e589ccf9f8ee81b61621c65f01d8a2dd8fd6f312ed42517de8301ffc2"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_03_jpg.rf.9b58dfb696843a1adb885a0719c0e5e1.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "6d060488dbc6903627d6665f69e580e1fc7252ea5e4100f7b61aa487af176760"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_04_jpg.rf.8336311068ca2d86e6184564be27469f.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "b0a0934475afbdd7ef8235a72a7509410753d8f37ea915d3db360aa1a8921750"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_05_jpg.rf.1938b75374fa67afea6c63a2b6a9156d.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "21cb8b8c82ee937b180b9394fa934cc8289e2c1a49fa66598d6f1dc10e7f97f0"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_07_jpg.rf.40568e799d614df7b0ab1b94071beed5.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "f1debc15a4924a24831d0e010a4566bcb85bb880e3dc758c00fafd92f096d42b"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_08_jpg.rf.032f3dc9af0efc2804f11d997fb542dc.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "2a1e87cbe83bd28846b3da60ca83543cf10d607b84d1623b74073959f39f35db"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_10_jpg.rf.a2bf38a0b0a53f9bb4f1fd11e3d2de83.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "0893b5f32bab15e2406809f7f28e9886e197209947fade11be245fa796a62bbb"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_11_jpg.rf.dcc943c87752c730f7c69d58793653d7.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "76aa99223c3a9e948f955b948b0c4133de436cf9fc02153efdd5f1e4dd67f159"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_12_jpg.rf.d086424fe3be03ab501d73d5ca0051ab.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "9496f18f9a711a5e32dbf49176d924335071bacd268855f767ed7ac98caeb250"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_13_jpg.rf.97ec06b726612297c85f7be3393f907a.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "3a14b7863973bb1f5668f8825a8c46e1fd957d7e90b6e54be91d6923a3f1b2e5"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_14_jpg.rf.9d2f1bb00c86bab6421dc13fece5c34d.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "9e523c05f05ea62c1eee000dc9821261823e8bd41d35566fa048debd545458e6"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_15_jpg.rf.4aa8be3fc0f1ece5b1248c38e38be77b.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "de7db9dbe422b7402e61ed814876083d78955b168773d9381402613cba5e7029"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_17_jpg.rf.03c53819c0dbeea359ae7f8c5ef476aa.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "57d096f031f1c2cc3c4fe763bab4c90b9cae335a9c82353fc2e246c84944e766"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_18_jpg.rf.fa8debc1065ed77b2e02a90102c57632.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "739359adae771e1b2cc08b154e5de6e26a7e3473e8c1e0f96c5f9484e0c78938"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_20_jpg.rf.c5249a9031c22e0f774006c1f79909cf.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "75597c651666e4109b1625c8cf37a75f726286b300243566a01d3f97da60e614"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_21_jpg.rf.ec7aab1a5557dbf314953abf470acb0f.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "2a8fd2fbaa7f4e659d50abdd5a572302a6113282c9bb3f49f11828cf92faaddb"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_22_jpg.rf.d5d6046d7d49105310341d6726f32691.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "91e11a4909cdc100dc19e293f45b2d2306a49ec613116847cc7b92af60d4078b"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_23_jpg.rf.f5bb977a114dde2e0af13ee56e43715b.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "62cd30ca7e0ed36cf6354c58bbfdc6487b4c39626094049b8a38f509ed6d4747"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_24_jpg.rf.036b597c39499a829b55a7131e9a513e.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "f1d4f4aff1cce5f3b1dbd789e954db322f3fca2f9c08f93f7d2d49296c56092a"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_25_jpg.rf.a8df463c1e3674ff65d1d52b5ccba8aa.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "623c1a07ac6e78ca5edea99c1cb9b07f7519b207429eb3d6a06f1d96c130d6fd"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_27_jpg.rf.61fb4bc6d7d52e18bddc0275b89005a3.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "b9db1f81db85ad5c9d52e80fc66e5135ed6a3535bfcdd06bb9c25828150d26d7"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_28_jpg.rf.9fc277ff09d6267fa779a393045d3554.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "19bdaa5bd4f228078bc0b899552cdb284b30aae2168a4f37a5b57eceb11c3d42"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_29_jpg.rf.7e1592c6e7114a07a250a0b605064e43.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "83795b911323a259b1fe1e5686c270a561c5b0b4c2b3bc258ec7f14416932d20"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/KakaoTalk_20241012_234830161_jpg.rf.fcee6d70c478d54a0f3407152b73761d.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "f8300871ecd208eaa4d89b6918bbd4e435eae05ede9d04c3146685197c091596"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/KakaoTalk_20240906_205618831_04_jpg.rf.5dc8e9a0194d577df3138025a1dd1ecc.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "0a633f17776ab50e237b516f94fab30d2f34c5e1d61540e2d002a4e8b2783992"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/KakaoTalk_20240906_205618831_05_jpg.rf.fec9cc10eaea7801f2b7b09f00634c6d.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "ef2a13e33c184e0f086bf94ddbe6e927c0193fb9a906f0c549b7f14612cc6e29"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/KakaoTalk_20240906_205618831_10_jpg.rf.1c2962dff75c09de05ed8a7cbe51eadb.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "fa9df23d15d5a0418be741f402f699a36f163b012d0d662b00b4cc6ac20b4992"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/KakaoTalk_20241012_234725691_03_jpg.rf.c00a8cbfa730a43d15cfdc30ee98b41d.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "201677c1cc8d7c6cdc0f713a60bc675c72ab5eddf04aaa6cc2e8066a16ac958c"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/KakaoTalk_20241012_234725691_05_jpg.rf.daca0dd4636594dcf722e8a1e2b76514.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "821c096a91b84100d0480f2875a70b4e188bc599cb9fffac086aa6dd14cc1d9f"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/KakaoTalk_20241012_234725691_07_jpg.rf.e386b713252bf49c389faca53ecc74c7.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "a88aede692b8cddf6cb4e5254683950afd29dca5305c4465dff78dff293de55e"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/KakaoTalk_20241012_234725691_11_jpg.rf.b0dea898c16971867b53237376b06f4c.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "9f045fb9f95ae82aee40af0b7de0d1841f200b484622c8f68149bec891d8ec14"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/KakaoTalk_20241012_234725691_15_jpg.rf.8875e10b2ddb2e4c7e697e7fa94d2e74.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "bf1510d8d9467656b7f4d78602b2abdec583d2a06d72f977ccfb4d269980933e"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/KakaoTalk_20241012_234725691_16_jpg.rf.da7ef474b33ad1a27e2aef76c3f58da9.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "1747e890312cdd46747ef64ba4e4863c32fc38ea775f86fd2fc7157cb106ad3d"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/KakaoTalk_20241012_234830161_06_jpg.rf.6525f1b218bf00c4141cfafbed4494d7.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "ced6e9168160e2ffb876ba1e0fdbfd65e43d5cda146936dcb141c40944ba763f"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/KakaoTalk_20241012_234830161_16_jpg.rf.dca9a861b6f6f1fd1bd50efc88f8aa7d.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "e9b0de7a24fba4a16c8c2e4000e2ed32ff5da702417cf8174f7619f774e5d416"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/KakaoTalk_20241012_234830161_19_jpg.rf.24b219edc6ef04c0478e5aca759cfa35.jpg",
+      "split": "train",
+      "group": "KakaoTalk",
+      "sha256": "e1b98a5ee426fd331cd6966996640fbb099cb51a3a371f572f3668c49329fc80"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/test/images/scanned_result_10_jpg.rf.19f3d3ba12a84d39efbc8cee33bab8d5.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "2e55e99ff910328cfd8dbcc3b517dd7635de9ee4d53f9cabfc317436def5e2aa"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/test/images/scanned_result_11_jpg.rf.b75fd9a29643184654ed3a6ef83529d0.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "5cdc0514ad62a53e8e4208dd95cf4b56e2e0fd17b5b843fe7b24fea7b9dddc5f"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/test/images/scanned_result_jpg.rf.bdc61e65f122ff317e62014c9814a704.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "eaf8c54c78186f4193109cb2c45fd2cb50302990dd64fc6a1a899050af572bda"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_11_jpg.rf.7e0e1539ebdcc48b336d8a97351909ae.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "183b0bd8e109c342994e5fbd405154c3efb88dcee8a3881e85889c63e0cfd2da"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_12_jpg.rf.0296bbe1232f4028c002586fc9bd2318.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "ee89e4b464e77220293e1a561c73eeb068c102c2a1a86a523a1b8364bedc19fd"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_12_jpg.rf.978b3f766ff9d83efe2d4c7b454d0901.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "2ad27b046f20bfb0a9294d6ab12d9de574690134f7ed05ed0f5e220319f8a9df"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_13_jpg.rf.2c1dfe9c8d389493b21d8b6afd715ecd.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "0d45f8e8ab6806fb56e6c1e0785a433635ea4e3aa917888c002ec17aa773e146"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_13_jpg.rf.fbf18fd5376c9616895ca89b006906f5.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "b7acedbfa0c68e1cb1dc11a7ff9c90c413736a64970611c9f3e028eef543f617"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_14_jpg.rf.16eeae750efde56538658254cdb29451.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "bb6b558ca49800597c62c00475d58cd7a0924499032af7790b631615235b9c31"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_14_jpg.rf.848f143ce04e93a7223c71bcf0841a7a.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "8a7d68c61483d5f93ff8048479a8db960095f7057dcc6cc514a2498ef99446e7"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_15_jpg.rf.0067c49caef4428c2b568a55b2878c97.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "35ee589b615c1b753c7bdbcc9cbcfae2cc5ec64cdff7928688ce94e44856879b"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_15_jpg.rf.092d67898c22efe27846e7f0b5a9a444.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "8813a20efbec28f26c68fbec9ef1d869ddd47950dd359100bb9956cdf4a0f8a9"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_16_jpg.rf.325b97933459cb3c8ce405b82f0cc69f.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "b2f5a911ce7aa2c3f077d81b1b86a096019276f45617961b9326a1f82ca26fa7"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_16_jpg.rf.a5895f246f75aa4154dacf8833828791.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "3dd8a8afd63934dfcdfa5085d1053c72eaf786584da51c2153b312675d60da95"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_17_jpg.rf.61b55c21cbfd6861d3487e0b2d03b462.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "43805801316a0f78025bb8e70f4e6ecb21146bb63dee78383712760d929a0454"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_17_jpg.rf.ba89b412de456b43d88556421e1ef5de.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "046f60eef0cd21f6c03b1d45297d7c1c5bbafaafb0849771a9bfa6b4bd7dceab"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_18_jpg.rf.3add9f989e37646fa881fc15409d9a1e.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "fd2cd139825f5d230eaa198e4ef97f205cf69356807f028435821b671c229313"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_18_jpg.rf.72a20d46a3412d33e0dbfc941c996a56.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "797d147006fa3bad8822e45542f70dec4cf0e711a5d557c1e16e41c4af23c48d"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_19_jpg.rf.53b21a995ec82534f7701fc7fae71d3f.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "1ddbb0113fd9ffb08147ef0328aeea5556f68a370fe946bea210d5ccd7dfb09e"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_19_jpg.rf.f1a7b5e81eb946e3e499b6344094e3e9.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "827ffceba86387fd794dcbfc30c4cec9feb7e0e0b2fdb191afe40ea18834cbca"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_1_jpg.rf.ae39ed2ac492fe1b36de9278889a5a43.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "fb3daaf421a1537b4d0a9c854e50c84dcfb9070cc7e1b78de36c9d9188c94752"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_1_jpg.rf.e7419dcd70ee9dd6ae40ab11de7e3a19.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "7bd0232c061c19878b691af5c141f7cb70cf7e2747388b3e9b5b0a9dbc049d9e"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_20_jpg.rf.2901e9114b959604a43a9e8a4cf28065.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "7480c2c3bdcc854664ddb503263825e08f7caa934eade0a13802a75a9b17e36d"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_21_jpg.rf.8034675e55d14c8acf5add57c5d7ecdd.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "3fdf35a5e0a67f474eea161984c65d92e28ad1e048f86fd0f696f76c0c8cbc87"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_21_jpg.rf.e959e9b100b20791c4725e8833271094.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "714b96a0bac8ff5bb0b073ad81f1ae9c71fd6abf0ede29d90bc9b395c23d07d2"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_22_jpg.rf.62f1fcc425fc12a073c76e368144882a.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "0169736080565334486a362e1ab48edd61842cddf18a13d3d4cdff821f1f0ff6"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_22_jpg.rf.ba76682b27d142b4c5167b8f267beecf.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "d959fb113600600dd29d76a61f519d6fb640e8c32d048140c5ed4ba8bf8a4ea2"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_23_jpg.rf.40989270e877fee7fcc03e9e2f15acb4.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "2f3ef9ace3bda06110fd954d13973bf460dc8dd8510f76b181867396128c0b7e"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_23_jpg.rf.4f2e2f6b70b601b7d86109cf8836360a.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "59e6d73cadfc4c506b853b82e1ced93a91a0dda69a01bb8cfc00658b70dfafcc"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_24_jpg.rf.90441858f0124c189b4b6f8a1fa7f5c9.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "6973ac90f8beb40bdf2c57dc4af3a51dbe7910c1646fd4ef9923dd2a6def90e6"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_24_jpg.rf.da2e7e335541b0adb6100809c23eca19.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "b179f2dc1306ea3249f2349a6d1c69b60bff89dc2932c505602a5bf7b434d9e7"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_25_jpg.rf.27b000b6be04e16ff2524b467e940a91.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "cd21ea5fdff297131237c377c928a338585507a20753e1ca480dd6e80a23655f"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_26_jpg.rf.5a7a52bc28254e8075f6c4f82a2f0f0e.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "9e55cf94d6488892986054b2c277d63b634e4633ea02e6c0a0e22ca6dcdc5a6c"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_26_jpg.rf.dd8ef94b237dc3c0f92d422eb7c1df27.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "f45cfef9f590c487901585149fe14170d2461c0a8c6dcc420c365f3318c327cb"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_27_jpg.rf.88edf4dd75a48bbac5f79c1a66444338.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "52aaceec3decb51fa53e48efe6e8ce61f87156068fc6c5fb8fd4e48a3f52c478"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_28_jpg.rf.4394d69a8e6840c1073ff5e78248e611.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "86c3398287b26807bf3e4b24942e81ccfaea20c860c1ede0761acebccd69ba9f"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_29_jpg.rf.32c2c6d9b8f70bec6ad3ee7371364cfb.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "e0855f294e38b9b6f5c11fd8371041e190676f2b051529e5d0f30ebc280d3946"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_29_jpg.rf.add5d94f308e4c363b0a9664e2bbb683.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "7e923b4e8330c1dc8c82549937e02586d6f88ef49eb4f6256c45b87006696534"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_2_jpg.rf.3b58a9e512f58710fe3c48ded905ffe3.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "3b9e0c4c9936743faab54190d454a87def047de30703ac54943329163bc8ddd2"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_2_jpg.rf.9bff1e3bf4abec16df61f64c3b56ca72.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "4528e1661b45a992b979e03d54da78d55758756fa83f0005ad86a0df80cf5551"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_30_jpg.rf.63af3513f23689776eeeaf86d5b4f051.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "8b6798a2e68a49d90e25c6c26bfce8ff0f610cbdab9b2da57cc7551aaab5fd70"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_30_jpg.rf.709ffc6773de7c719aa2269df1b0fe89.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "6d7bf9ab996a1ec41e506939db296d5c6ebfbb804b523c14f516111f77fdedfa"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_31_jpg.rf.218baaaf53877e7e1e3ef981807487e9.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "192ed33d3e760999d05d73b9bda0cc1c4e99195200c85e1afc68b20391080d8e"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_31_jpg.rf.efeb0e8881164cf3c826d1bb792d2b90.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "93d21eedfe54ca29c45b1ff3e2a4aa91658914f0ea7797317bed3351146e47fe"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_32_jpg.rf.72cde60c648396f34ce1c1629bc0d605.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "7e2ebbb7df83be9e74df84e8d184996dbee5103b09cea5173b1caa9850552d38"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_32_jpg.rf.a6805105ac0fae06d18aa5664c7b95b4.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "1ba56f0e29406c7a709f744df9b19f60a9cbe5fa31ad143587b3e110594210f5"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_33_jpg.rf.84d245f0b0f5ec1b9c22ac68629c03e8.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "8bf04fa738455ef6bd6050efb13bd3d8cb0b7e769241b0644c270a23781c716e"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_3_jpg.rf.044cb97ea59e686d4d90954f94b1e6ce.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "b893dc09aee63e9eda099a37f23579e9f88a7a226293605dfcb3fce00ae1bd25"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_3_jpg.rf.ffababf15c1971c4af429c4b214fd90b.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "e308184d52e53df434b4147a79b8d0760f8d097ebc1deaf478a84b8de2235bf5"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_4_jpg.rf.0a8eb500bd0bcb4ad8d8cf4b1c37cf16.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "f6b265c9d1a24d4b5c38fd6098dee04a932a64242182acb58bce5230e904f862"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_4_jpg.rf.5c33af4a25c7be2ba7339b9ed39ab0e5.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "333b90575e3323223c3585ca18aacf6e128485ecee8a84ee019cb5f7d690edd8"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_5_jpg.rf.03181f15c01121a2139dfc0ca4ccbd3d.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "52dd5a566fe6a7a6249c3e57b5ac2a5a21b12c7b7afb837df6a64cbab9ad5110"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_8_jpg.rf.033c9e624bb7594b9019b829a42bff3e.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "cca9aa56432346bbee49aeabfdc5929f872f50ed097d93211266804231d0b3db"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_9_jpg.rf.2df3eae7b09960687937d842dd1999e6.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "b005c2b1e7701b1e9b8af796069e4bff3648ce6c959737dfb38b5a7c0ab23cd9"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/scanned_result_jpg.rf.a871a9a80ce456093111ce05c5409ff5.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "ab395a962ee77660777dc5a4245cbfa34f46b75e643437a3f8fd7ba64ff7d715"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/scanned_result_10_jpg.rf.5b4dc2649866bdb2f9d3cad700a7d273.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "707cd728ab352c6ab1753d954e5de9d5f34e6d175318d1ab9479b0d5405475e5"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/scanned_result_20_jpg.rf.ea75035181616a83bb627cc814e6f95d.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "338518d65a777864344e4995e3280877be556212c2b80a03e621debdb76c631f"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/scanned_result_25_jpg.rf.2a67c9b2c87f4ff4c91b1c6179d9eeee.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "c37621aec287e8d5e129d6fc845bd90546d4dc3b5266031370cb932d21315ebf"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/scanned_result_27_jpg.rf.8f8803b2d30577e329e4d55b4225312c.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "eaad41d62722080c61370fd2c68cfb8759b2527b5a0679a59bfe34279f0001ea"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/scanned_result_28_jpg.rf.f9b58df23043e3a56ab72c0d9def2394.jpg",
+      "split": "train",
+      "group": "scanned",
+      "sha256": "757ad2987553d576c8be268aa0cec5daf9e57ce98d2684a48a6be1e659e809fc"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/test/images/transformed_20240524_182249-jpg_jpg.rf.7d02a9ab4a201ace7f7a0345da598377.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "e9acb96d78dab65d5dba922a08e85a3f276a9c67f9e0a145d3da1e5fa080e269"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/test/images/transformed_20240524_182838-jpg_jpg.rf.d459b033fd5c62891f85b19a8e3876bf.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "d060bc4176f511e206a1dce1863b17431cbae3fcd47dc096935097707f63a8b9"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/test/images/transformed_20240524_183030-jpg_jpg.rf.2eddd4708a28a95f3fea6c3b9c4b21ad.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "58863330a8fa16e0556e7a2563c6b60803539c6c1551d01135a7e649b5cfa5f8"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/transformed_1-jpg_jpg.rf.8d98e3de6f656800b902514ab942bdac.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "0333db8b37734b126bf8d190ae5d1eee7d70b5c1bdb655e2a8f76bd1575344ec"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/transformed_20240524_182234-jpg_jpg.rf.4447cf8b36ac77e3bd83d396b26930c9.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "b7f9c1886c7ac14aaa65e24dbee3e428112fb65841e32175aa13ab4cd5f8ad4b"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/transformed_20240524_182239-jpg_jpg.rf.89da015c60ca17afab6765db46e3dba5.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "8c74ea1747cf6278125006efd6e1c5ec9e708c888a7a611eb9309fe3354028b9"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/transformed_20240524_182244-jpg_jpg.rf.1e0945d71a56870ca7168044f3d415ac.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "0a4fcef82817a6db7d5cb123be45aa97350113a0103d4014cb186855199534ab"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/transformed_20240524_182348-jpg_jpg.rf.aa4b9ca9e2248c316013a416e4e27b05.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "b851874a450228235735ceb278d914511b099c190bda76092e99400b84bc6879"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/transformed_20240524_182356-jpg_jpg.rf.941b3c9ef77f3958aa1255aa65ea655a.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "e97c01b2fe4d5c4989be2bbbfa5d2ab2ef8216525ff287065f323fcb32dbd357"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/transformed_20240524_182356-jpg_jpg.rf.ae35860a1aa82c7ce3aa8b5eefd85ec8.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "9a9c09ec29540efdcb99591f8618f666090bc20c95fdce1f1d0edc6c8fb097dd"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/transformed_20240524_182405-jpg_jpg.rf.7ca2d56ff00e6c0fa1765d5163d26061.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "3bc23e37759fd532514a3902f160bbf685a7d4e5fe7824fc40189d4a49e6c8d9"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/transformed_20240524_182631-jpg_jpg.rf.26537711297c42571c1f55e5f5c46d5b.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "c9e1549b4d83679ed6c2db8934a616c88ab48061b857cda2c42c5d96b55784ba"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/transformed_20240524_182636-jpg_jpg.rf.a7f1308657967690d883e7f36fabc2a4.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "cf2d7a2159bda4995adf754a85976c9797f9829e008479487f37fcea6a9043f6"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/transformed_20240524_182641-jpg_jpg.rf.a038fb4f8e139c38be182b19c33c6eb7.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "81c1e21dfc386a42400bc12e598091d8988179cb8af68002b6bc87d2233339e5"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/transformed_20240524_182648-jpg_jpg.rf.b2a6102bcf1fdae8812f89a7ea93c7b8.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "c5d1cad64f77f439134679171f7f694426a62ac488c9b5f4493a679f4225f73e"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/transformed_20240524_182657-jpg_jpg.rf.255be1b09571e0a3cfb49e0b69336fc4.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "00cebed1ba853e2ef83e398e86564e3c69851d3acf1c0c2856dfc725ff181b72"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/transformed_20240524_182826-jpg_jpg.rf.15a34de277f5feb37f5edb8f5f653f50.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "d7a160b26a7cea69fbaf31a212281085dc0ee4136c9e4e9a1639accf9a1181b7"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/transformed_20240524_182829-jpg_jpg.rf.f7a81384f668e0a0c066009ef9f93d28.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "d9438a3dd783eb15e5013da92bd84c025ff3e23db6f92fe5cc0ab0af1e4ab6b0"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/transformed_20240524_182834-jpg_jpg.rf.07e511f48254023469044be1fa75f56f.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "d7fe48c21805f4dea4e0cc90d2d7fe1552f72b914f42d7c697a0b4a77c601721"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/transformed_20240524_183043-jpg_jpg.rf.8451d6af7be4553586eb73cabf8c485d.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "e720cf5432aa4f5fdea42b4629d3232e4a28defc172c50eb28f0d892b1ad980d"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/transformed_20240524_183227-jpg_jpg.rf.496a10decd8596ebe4e79e7639c1e1e6.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "dd370e95e045437a4d7f173ddaead75849012f8ca8b6e893f6db3e36c829898e"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/transformed_20240524_183232-jpg_jpg.rf.c476b6a9daeae339f15dfa3d7bed0535.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "6e829accc01742b3d25ade65a6b399a133696ec4cbb91deb77b50bf126018fdf"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/transformed_300-jpg_jpg.rf.2207f5b60b51c363334de9e547dbd1da.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "721a5a284df931ba890289445e3dc627d82f29a5432672c65855a123ffca2e96"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/transformed_20240524_182133-jpg_jpg.rf.daffe62a91d5c889f731d6fd9d5e26b8.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "7b3ff4cdad8fb16b1e73476c36f78c471852711d0840139910a353e20fdb2b17"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/transformed_20240524_182350-jpg_jpg.rf.fd5fb8b8d0c1e408145bf2a18737001a.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "adbe8462863114d8dcefb48ee91126d5d1e2decf23b214b5cd11c440cf57d6e7"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/transformed_20240524_182400-jpg_jpg.rf.6f9c03f29cb989bcde88c88ec115581b.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "eb67965aa9e39d8f0b24adb57cac3d941c50e88a44b294d9d868303cdc0a9e71"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/transformed_20240524_182823-jpg_jpg.rf.d0277f3e17b0d2fc18051ac787fceb69.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "e64d32c61047c3794e3506bf4032ab5168b3e27b0810d28ce78d389d55bcd9d1"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/transformed_20240524_183055-jpg_jpg.rf.79e1fdaf02887c8a19535fac94a9979e.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "4177a3ef89a4ff78b60d74328b3b336eeee498fe804c34119cadaee7c5fef0d7"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/transformed_20240524_183220-jpg_jpg.rf.b3696727a9bc3125f3c9c0c35d526593.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "8768513ce356547835a574c0cd89a35131bc0d8293275e7ba11da5ea6cd796cf"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/transformed_26-jpg_jpg.rf.944bd94c9f5637a353e75645f02c0389.jpg",
+      "split": "train",
+      "group": "transformed",
+      "sha256": "d2a81bb4e023b1628bb04c82e90bcc67c0dd3762027143f4d7b86cee83c45b22"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6002-MOV_20240605_191053-349_jpg.rf.3758b3758a45f2dcc63e3589b5aca567.jpg",
+      "split": "train",
+      "group": "IMG_60",
+      "sha256": "261df21517477cd1298fd0bf0583a9e6dca7e94e4ffe7ad3de87c3e1bc40b6a4"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6005-MOV_20240605_191128-084_jpg.rf.eaf368f2b2965348eab1607e11918ea1.jpg",
+      "split": "train",
+      "group": "IMG_60",
+      "sha256": "91ba369d1fc66358916dbbcd4e962ae94c8f7a29798ed273d48d5e8651df22c3"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6011_JPG.rf.cb6c670cf564c254d7761e66e8cca0e7.jpg",
+      "split": "train",
+      "group": "IMG_60",
+      "sha256": "88f8697c4e771abf2f0ec0dd1a8b28cfdb5b7a1726f2c53dfb3aedbeeb3dfc87"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6038_JPG.rf.1120d2938cda5b685bacb96816b729fe.jpg",
+      "split": "train",
+      "group": "IMG_60",
+      "sha256": "86695d0ca34f687dc4cfe2454249279c662863c0fbe46ad38b9569ea8e829730"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/IMG_6043_JPG.rf.487c40f3d5e7dbda194dfaccdf0a77db.jpg",
+      "split": "train",
+      "group": "IMG_60",
+      "sha256": "ee62266b98d8b06fbdc74ad78ac57179d926072198c372c065f68f4204f599e1"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/IMG_6028_JPG.rf.e93355d84400bd5c5a015f86b62c7b3c.jpg",
+      "split": "train",
+      "group": "IMG_60",
+      "sha256": "aabcafd924ad29d766d010fb584c8f294692cb723dc8f7556169351f6218d8b8"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/IMG_6033_JPG.rf.ba0027d5442a40a8de20eed30e67dbd6.jpg",
+      "split": "train",
+      "group": "IMG_60",
+      "sha256": "015ddacd258ba1a581cbfe441fec9c657c6e2435e65362d51b07ba4b7a1d17f3"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/frame101_jpg.rf.5f79dcc2b908bc1db79b26318dc1555d.jpg",
+      "split": "test",
+      "group": "frames",
+      "sha256": "9855bbed13465112578da23b5c82e997c4fdeb01e6dd2fd6b7acf7543fad51ec"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/frame111_jpg.rf.95623db661ade2883b8631361ec428c6.jpg",
+      "split": "test",
+      "group": "frames",
+      "sha256": "97a23bb8a88b7cc6bf805e3edf91519978b342a867794f9de6166373ecc36305"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/frame131_jpg.rf.affef416042ad5bba01458ef86c03049.jpg",
+      "split": "test",
+      "group": "frames",
+      "sha256": "086039bbc554a8b0a2f7fd794fafe78508a7ba4c8e1f435327aa289717cb58e1"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/frame141_jpg.rf.d44c39c025412cc27dde80dc23c3b49b.jpg",
+      "split": "test",
+      "group": "frames",
+      "sha256": "e137596800d5db6504f6bdd0a2a4b96d5ddc724f3e7d520d4e708cf4a4e48f17"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/frame147_jpg.rf.2290a43ec38b57551fc6972418d22ed5.jpg",
+      "split": "test",
+      "group": "frames",
+      "sha256": "49b652f732a75245ac809d64db92436041d5122ffc2a58bb8f10fc7d0365e249"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/frame151_jpg.rf.07bef4dbd5e60492067ac049354115b2.jpg",
+      "split": "test",
+      "group": "frames",
+      "sha256": "51e8aba8e65abd7cc2f9b41772fa272dab570367c3b6e1e1ffaf16907c9f30d4"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/frame154_jpg.rf.247c5abe3f6b307910ea61dd0436f40b.jpg",
+      "split": "test",
+      "group": "frames",
+      "sha256": "787ecaa9dea960896a7833234b4049270e6fd5c10d40caa43f133f31730a752c"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/frame16_jpg.rf.00ada13fc182961efce1b1cd97604b69.jpg",
+      "split": "test",
+      "group": "frames",
+      "sha256": "a0cb25782031561f06359daef6f2ecb69c245843418f8da6ba4556606a79ea63"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/frame1_jpg.rf.5664351d35d60d3fd524b965f736d168.jpg",
+      "split": "test",
+      "group": "frames",
+      "sha256": "4741cd652bc4f076fb3b38f708e047bb0c623c48165121d52420a627c80cc219"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/frame21_jpg.rf.5150d209c9bb1388e5c673109fb37e4c.jpg",
+      "split": "test",
+      "group": "frames",
+      "sha256": "40b93a4cb6ce451f3860d84b098d430dab88d783035df7c3651f23f39b391359"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/frame26_jpg.rf.02c89298171fc74abdb28a91d0b33456.jpg",
+      "split": "test",
+      "group": "frames",
+      "sha256": "41967f015ca6d5d3d7f339397b0ed9f68930ef43c3e7838881fafd62ded60618"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/frame31_jpg.rf.4a222e1982e5abeb532865fc6fca8968.jpg",
+      "split": "test",
+      "group": "frames",
+      "sha256": "ea428d79793557f297dc433cefdcd97016e4db05143bbb005885e86b34aad703"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/frame6_jpg.rf.5d32dd77983a064dc9d93e92a47e2248.jpg",
+      "split": "test",
+      "group": "frames",
+      "sha256": "e1d8fb0e47ef3522071eb9e72a040b71c333ca16deb874e4dfcdd5ae1c8bca1e"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/frame81_jpg.rf.67fbd84235f1694ce1b19b030c260149.jpg",
+      "split": "test",
+      "group": "frames",
+      "sha256": "dff8e548abae164aa43f67762f1eb3b27c24dae4bc3c79b8e4468b1c4e3d7a9a"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/train/images/frame91_jpg.rf.9c049acdae0da3c17ce16f4238433241.jpg",
+      "split": "test",
+      "group": "frames",
+      "sha256": "e206d5666020c9a8bcc37980047c3a7be5cbb430526581a37e596f32ab96022f"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/frame11_jpg.rf.21abaa560017119eb13b9ba3813b7d23.jpg",
+      "split": "test",
+      "group": "frames",
+      "sha256": "dfcd2c21f8ef55702d711c74218b16bb6efce7026f09d9e2bc613a19098412dd"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/frame121_jpg.rf.7f482b1ab17e50f0b8ea4cb9668b31dd.jpg",
+      "split": "test",
+      "group": "frames",
+      "sha256": "fb819692da30a20940a7435a13036f7c016e3b8f531a5178a1ebfc259e9011b2"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/frame36_jpg.rf.8fd2506afaf43119916632986b802da9.jpg",
+      "split": "test",
+      "group": "frames",
+      "sha256": "6c2bcf925bb9a527fc26334edf4b07d97d897b81ee86b4f9de310ce901e76f96"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/frame41_jpg.rf.00c60bb1b140fbd00bea55cf6b588b86.jpg",
+      "split": "test",
+      "group": "frames",
+      "sha256": "04ab02c836ce35834d85cbc2708379249dd176b540878a52d31ce9c93576b339"
+    },
+    {
+      "source": "/Users/danielxiao/Downloads/sherlock-ohms-datasets/circuit-endpoints-v14/valid/images/frame46_jpg.rf.13ced924dcd5d77888bacd2eec7b5dac.jpg",
+      "split": "test",
+      "group": "frames",
+      "sha256": "7aebe8d632d97cb8547e0d56bd5ed3f2752917932e744133ea444e0bc3d14b8b"
+    }
+  ]
+}

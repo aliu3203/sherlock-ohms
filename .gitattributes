@@ -1,0 +1,10 @@
+* text=auto
+*.pdf binary
+*.pt binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+
+# Keep downloaded attribution and export notices verbatim.
+evaluation/**/README*.txt -whitespace
+evaluation/**/ohm_README*.txt -whitespace

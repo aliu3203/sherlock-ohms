@@ -1,0 +1,7 @@
+{
+  "name": "Join terminal strips 1 and 5 on the a-e half",
+  "terminals": {"START": "a1", "END": "a5"},
+  "parts": [
+    {"id": "W1", "type": "wire", "pins": {"0": "b1", "1": "b5"}}
+  ]
+}

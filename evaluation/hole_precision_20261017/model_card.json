@@ -1,0 +1,58 @@
+{
+  "status": "prototype_requires_real_camera_validation",
+  "scope": [
+    "wire_endpoints",
+    "resistor_endpoints",
+    "calibrated_hole_grid",
+    "electrically_equivalent_topology"
+  ],
+  "parameters": 2780857,
+  "total_checkpoint_bytes": 6121109,
+  "weights": [
+    {
+      "path": "/Users/danielxiao/Desktop/sherlock-ohms/evaluation/hole_precision_20261017/runs/nano_endpoints/weights/best.pt",
+      "bytes": 5640456,
+      "sha256": "1fd8774278d5b60f7f40eb46e3e8944b764eaf8dac1feaaa488e5eb124c18122"
+    },
+    {
+      "path": "/Users/danielxiao/Desktop/sherlock-ohms/evaluation/hole_precision_20261017/refiner/best.pt",
+      "bytes": 480653,
+      "sha256": "122b9c8ef8a107bb1df807b9f734126f8621635dc7ea50d90cbe377bf7b31340"
+    }
+  ],
+  "data": {
+    "images": 847,
+    "train": 550,
+    "val": 187,
+    "test": 110,
+    "split_audit": "dataset_audit.json"
+  },
+  "training_epochs": {
+    "detector": 60,
+    "refiner": 40
+  },
+  "tests": {
+    "passed": 130,
+    "warning": "Existing FastAPI/httpx deprecation"
+  },
+  "hole_development_audit": {
+    "truth_objects": 40,
+    "eligible_truth": 28,
+    "exact_pair_agreements": 16,
+    "matched_predictions_with_two_accepted_holes": 16,
+    "wrong_accepted_pairs": 0
+  },
+  "evaluation_files": [
+    "training_result.json",
+    "model_evaluation/metrics.json",
+    "refined_evaluation/metrics.json",
+    "known_wire_refined/results.json"
+  ],
+  "limitations": [
+    "Refiner and geometric safeguards developed after base-test error inspection; fresh independent board/camera test required.",
+    "Hole audit uses source keypoint labels mapped to a measured grid; small correlated sample with exclusions.",
+    "No electrical continuity, resistor value, LED polarity, IC, or hidden-connection verification.",
+    "The /live web workspace uses this model; independent real-camera and board validation is still required."
+  ],
+  "python": "3.13.1"
+}

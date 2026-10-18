@@ -1,0 +1,39 @@
+{
+  "status": "UNCALIBRATED",
+  "message": "Endpoint predictions only; no hole IDs or correctness verdict.",
+  "detections": [
+    {
+      "id": "det_0",
+      "type": "wire",
+      "conf": 0.7188398241996765,
+      "bbox": [
+        68.75935363769531,
+        353.59326171875,
+        488.49871826171875,
+        381.14886474609375
+      ],
+      "keypoints": [
+        {
+          "x": 72.91090994519439,
+          "y": 369.9192911652239,
+          "conf": 0.9696487784385681,
+          "coarse_x": 67.36189270019531,
+          "coarse_y": 370.38079833984375,
+          "coarse_conf": 0.9983332753181458,
+          "refinement_peak_mass": 0.9696487784385681,
+          "refinement_shift_px": 5.568175756701897
+        },
+        {
+          "x": 483.7886047363281,
+          "y": 363.49090576171875,
+          "conf": 0.59,
+          "coarse_x": 483.7886047363281,
+          "coarse_y": 363.49090576171875,
+          "coarse_conf": 0.9974765181541443,
+          "refinement_peak_mass": 0.4452507793903351,
+          "refinement_shift_px": 16.878882528828022
+        }
+      ]
+    }
+  ]
+}
